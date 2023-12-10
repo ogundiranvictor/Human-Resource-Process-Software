@@ -6,3 +6,4 @@ This software can be converted for both desktop and mobile.
 - **Programming Languages:** P JavaScript
 - **Database:** google drive, spreadsheet API
 - **Tools:**  VS Code
+[![Built with Python](https://img.shields.io/badge/Built_with-Python-blue.svg)](https://www.python.org/)
