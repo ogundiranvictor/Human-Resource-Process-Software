@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRPS</title>
+  <link rel="stylesheet" href="./css/main.css"/>
+  <link rel="shortcut icon" href="./icons/mikano_logo.png">
+</head>
+<script>
+  const electron = require('electron')
+</script>
+<style>
+/*@media queries for the page */
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) and (max-width: 599px) {
+      html {
+  height: 100%;
+
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #00bfff;
+}
+
+
+.main-holder{
+  width: 50%;
+  height: 70%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 2px black;
+  display: none;
+}
+
+
+.mobileinfo{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 2px black;
+max-height:100% ;
+margin-bottom: 20px;
+}
+
+
+.main-holder-mobile {
+max-width: 50%;
+ max-height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+}
+
+.ico{
+  display: block;
+max-width: 40%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+input[type="text"]{
+  padding-top: 10px;
+}
+
+input[type="password"]{
+  padding-top: 10px;
+}
+
+#login-header2{
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+#login-form2 {
+  align-self: flex-start;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.login-form-field::placeholder {
+  color: #3a3a3a;
+}
+
+.login-form-field {
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  outline: none;
+  padding: 0px 0px 5px 5px;
+}
+
+#login-form-submit2 {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
+
+
+
+
+}
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) and (max-width: 699px) {
+    html {
+  height: 100%;
+
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #00bfff;
+}
+
+
+.main-holder{
+  width: 50%;
+  height: 70%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 2px black;
+  display: none;
+}
+
+
+.mobileinfo{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 2px black;
+max-height:100% ;
+margin-bottom: 20px;
+}
+
+
+.main-holder-mobile {
+max-width: 50%;
+ max-height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+}
+
+.ico{
+  display: block;
+max-width: 40%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+input[type="text"]{
+  padding-top: 10px;
+}
+
+input[type="password"]{
+  padding-top: 10px;
+}
+
+#login-header2{
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+#login-form2 {
+  align-self: flex-start;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.login-form-field::placeholder {
+  color: #3a3a3a;
+}
+
+.login-form-field {
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  outline: none;
+  padding: 0px 0px 5px 5px;
+}
+
+#login-form-submit2 {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
+
+
+
+}
+
+
+/* Medium devices (landscape tablets, 700px and up) */
+@media only screen and (min-width: 700px) and (max-width: 899px) {
+
+  html {
+  height: 100%;
+
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #00bfff;
+}
+
+
+.main-holder{
+  width: 50%;
+  height: 70%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 2px black;
+  display: none;
+}
+
+
+.mobileinfo{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 2px black;
+max-height:100% ;
+margin-bottom: 20px;
+}
+
+
+.main-holder-mobile {
+max-width: 50%;
+ max-height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+}
+
+.ico{
+  display: block;
+max-width: 40%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+input[type="text"]{
+  padding-top: 10px;
+}
+
+input[type="password"]{
+  padding-top: 10px;
+}
+
+#login-header2{
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+#login-form2 {
+  align-self: flex-start;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.login-form-field::placeholder {
+  color: #3a3a3a;
+}
+
+.login-form-field {
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  outline: none;
+  padding: 0px 0px 5px 5px;
+}
+
+#login-form-submit2 {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
+
+
+
+
+  } 
+
+  
+  /* Large devices (laptops/desktops, 900px and up) */
+  @media only screen and (min-width: 900px) and (max-width: 1199px) {
+    html {
+  height: 100%;
+
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #00bfff;
+}
+
+.main-holder {
+  width: 50%;
+  height: 70%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 2px black;
+}
+
+.main-holder-mobile{
+  display: none;
+}
+
+.ico{
+  width: 20%;
+
+}
+
+
+#login-form {
+  align-self: flex-start;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.login-form-field::placeholder {
+  color: #3a3a3a;
+}
+
+.login-form-field {
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  outline: none;
+  padding: 0px 0px 5px 5px;
+}
+
+#login-form-submit {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
+
+  } 
+  
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) { 
+      html {
+  height: 100%;
+
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #00bfff;
+}
+
+.main-holder {
+  width: 50%;
+  height: 70%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 2px black;
+}
+
+.main-holder-mobile{
+  display: none;
+}
+
+.ico{
+  width: 20%;
+
+}
+
+
+#login-form {
+  align-self: flex-start;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.login-form-field::placeholder {
+  color: #3a3a3a;
+}
+
+.login-form-field {
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  outline: none;
+  padding: 0px 0px 5px 5px;
+}
+
+#login-form-submit {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
+
+
+  }
+
+
+
+</style>
+<body>
+  <main class="main-holder">
+
+    <h1 id="login-header">Login</h1>
+    <img src="icon.ico" alt="user_icon" width="20%" >
+    <form id="login-form" action="welcome_page.html" method="post">
+      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username" onkeyup="activateBtn01()">
+      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password" onkeyup="activateBtn02()" disabled>
+      <input type="submit" value="Login" id="login-form-submit"disabled>
+    </form>
+
+  </main>
+
+  <main class="main-holder-mobile">
+<div class="mobileinfo">
+    <h1 id="login-header2">Login</h1>
+    <img src="icon.ico" alt="user_icon" class="ico">
+  </div>
+    <form id="login-form2" action="welcome_page.html" method="post">
+      <input type="text" name="username" id="username-field2" class="login-form-field" placeholder="Username" onkeyup="activateBtn03()">
+      <input type="password" name="password" id="password-field2" class="login-form-field" placeholder="Password" onkeyup="activateBtn04()" disabled>
+      <input type="submit" value="Login" id="login-form-submit2"disabled>
+    </form>
+  
+  </main>
+
+
+
+  
+</body>
+<script>
+
+
+
+
+
+      //this is to activate the username
+      function activateBtn01() {
+        pass = document.getElementById('username-field').value;
+        console.log(pass);
+        document.getElementById('password-field').disabled = pass !== '@mtn'; 
+        }
+
+
+      //this is to activate the password 
+      function activateBtn02() {
+        pass = document.getElementById('password-field').value;
+        console.log(pass);
+        document.getElementById('login-form-submit').disabled = pass !== '@mtn'; 
+        }
+
+
+    //this is to activate the username for mobile
+      function activateBtn03() {
+        pass = document.getElementById('username-field2').value;
+        console.log(pass);
+        document.getElementById('password-field2').disabled = pass !== '@mtn'; 
+        }
+
+
+      //this is to activate the password 
+      function activateBtn04() {
+        pass = document.getElementById('password-field2').value;
+        console.log(pass);
+        document.getElementById('login-form-submit2').disabled = pass !== '@mtn'; 
+        }
+</script>
+
+</html>
