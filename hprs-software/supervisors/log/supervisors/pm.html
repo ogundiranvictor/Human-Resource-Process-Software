@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRPS</title>
+  <link rel="stylesheet" href="./css/main.css"/>
+  <link rel="shortcut icon" href="./icons/mikano_logo.png">
+</head>
+
+<style>
+
+  /*@media queries for the page */
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) and (max-width: 599px) {
+  
+        html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #87CEEB;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+  
+  .back{
+    width: 100%;
+        background: #333;
+        font: 20px;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        color: #fff;
+      }
+
+  #main-holder {
+    width: 95%;
+  background-color: #e0fbfc;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+  padding-bottom: 20px;
+  }
+  
+  .welcomepage_logo{
+      margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  
+  }
+  
+  .first{
+    width: 30%;
+    margin-top: 50px;
+    float: left;
+  
+  }
+  
+  .second{
+    width: 30%;
+    margin-top: 50px;
+  clear: both;
+  }
+  
+  
+  .container{
+  margin-left: 40px;
+  margin-right: 0px;
+  }
+  
+  .title{
+    text-align: center;
+  }
+  
+  hr{
+    margin-top: 50px;
+  }
+  /*this code is used for the app copyright */
+  .copyright1{
+      font-family: tahoma;
+      font-weight: bold;
+      font-style: normal;
+      text-align: center;
+  
+  }
+  
+  .hidden{
+    display : none;
+  }
+  
+  .button1{
+  
+      margin-top:50px;
+      font-size: 20px; 
+      padding:50px; 
+      font-weight:bold; 
+    }
+  
+    .button1:hover {
+      background-color: yellowgreen;
+      color: white;
+    }
+  
+    input{
+      background-color:#98c1d9;
+  font: bold;
+  color: black;
+    }
+    input, [type="text"]{
+      width:75% ;
+      padding-left: 10px;
+    }
+  
+    input, [type="date"]{
+      width:30% ;
+    }
+  
+  
+  
+    .super{
+      font-weight: bold;
+      font-size: 7vh;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+  .clear{
+    clear: both;
+  }
+  
+  
+  
+  li{
+    float: left;
+   padding-left: 50px;
+  list-style-type: none;
+  }
+  
+  .topheader{
+    display: none;
+  }
+  
+  .titleheader{
+  text-align: center;
+    margin-bottom: 20px; 
+    font-size: 20px;
+  }
+  
+  .note{
+  border: ridge;
+    border-right: 20px;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-left: 10px;
+    margin-bottom:10px; 
+    color: red;
+  }
+  
+  
+  }
+    
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) and (max-width: 699px) {
+  
+      html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #87CEEB;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+
+  .back{
+    width: 100%;
+        background: #333;
+        font: 20px;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        color: #fff;
+      }
+  
+  #main-holder {
+    width: 95%;
+  background-color: #e0fbfc;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+  padding-bottom: 20px;
+  }
+  
+  .welcomepage_logo{
+      margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  
+  }
+  
+  .first{
+    width: 30%;
+    margin-top: 50px;
+    float: left;
+  
+  }
+  
+  .second{
+    width: 30%;
+    margin-top: 50px;
+  clear: both;
+  }
+  
+  
+  .container{
+  margin-left: 40px;
+  margin-right: 0px;
+  }
+  
+  .title{
+    text-align: center;
+  }
+  
+  hr{
+    margin-top: 50px;
+  }
+  /*this code is used for the app copyright */
+  .copyright1{
+      font-family: tahoma;
+      font-weight: bold;
+      font-style: normal;
+      text-align: center;
+  
+  }
+  
+  .hidden{
+    display : none;
+  }
+  
+  .button1{
+  
+      margin-top:50px;
+      font-size: 20px; 
+      padding:50px; 
+      font-weight:bold; 
+    }
+  
+    .button1:hover {
+      background-color: yellowgreen;
+      color: white;
+    }
+  
+    input{
+      background-color:#98c1d9;
+  font: bold;
+  color: black;
+    }
+    input, [type="text"]{
+      width:75% ;
+      padding-left: 10px;
+    }
+  
+    input, [type="date"]{
+      width:30% ;
+    }
+  
+  
+  
+    .super{
+      font-weight: bold;
+      font-size: 7vh;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+  .clear{
+    clear: both;
+  }
+  
+  
+  
+  li{
+    float: left;
+   padding-left: 50px;
+  list-style-type: none;
+  }
+  
+  .topheader{
+    display: none;
+  }
+  
+  .titleheader{
+  text-align: center;
+    margin-bottom: 20px; 
+    font-size: 20px;
+  }
+  
+  .note{
+  border: ridge;
+    border-right: 20px;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-left: 10px;
+    margin-bottom:10px; 
+    color: red;
+  }
+  
+  
+  }
+  
+  
+  /* Medium devices (landscape tablets, 700px and up) */
+  @media only screen and (min-width: 700px) and (max-width: 899px) {
+  
+    html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #87CEEB;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+  
+  #main-holder {
+    width: 95%;
+  background-color: #e0fbfc;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+  padding-bottom: 20px;
+  }
+  
+  .welcomepage_logo{
+      margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  
+  }
+  
+  .first{
+    width: 30%;
+    margin-top: 50px;
+    float: left;
+  
+  }
+  
+  .second{
+    width: 30%;
+    margin-top: 50px;
+  clear: both;
+  }
+  
+  
+  .container{
+  margin-left: 10px;
+  margin-right: 0px;
+  }
+  
+  .title{
+    text-align: center;
+  }
+  
+  hr{
+    margin-top: 50px;
+  }
+  /*this code is used for the app copyright */
+  .copyright1{
+      font-family: tahoma;
+      font-weight: bold;
+      font-style: normal;
+      text-align: center;
+  
+  }
+  
+  .hidden{
+    display : none;
+  }
+  
+  .button1{
+  
+      margin-top:50px;
+      font-size: 20px; 
+      padding:50px; 
+      font-weight:bold; 
+    }
+  
+    .button1:hover {
+      background-color: yellowgreen;
+      color: white;
+    }
+  
+    input{
+      background-color:#98c1d9;
+  font: bold;
+  color: black;
+    }
+    input, [type="text"]{
+      width:75% ;
+      padding-left: 10px;
+    }
+  
+    input, [type="date"]{
+      width:30% ;
+    }
+  
+  
+  
+    .super{
+      font-weight: bold;
+      font-size: 7vh;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+  .clear{
+    clear: both;
+  }
+  
+  
+  
+  li{
+    float: left;
+   padding-left: 50px;
+  list-style-type: none;
+  }
+  
+  .topheader{
+    display: none;
+  }
+  
+  .titleheader{
+  text-align: center;
+    margin-bottom: 20px; 
+    font-size: 20px;
+  }
+  
+  .note{
+  border: ridge;
+    border-right: 20px;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-left: 10px;
+    margin-bottom:10px; 
+    color: red;
+  }
+  
+  
+  
+  
+    } 
+  
+    
+    /* Large devices (laptops/desktops, 900px and up) */
+    @media only screen and (min-width: 900px) and (max-width: 1199px) {
+  
+      html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #87CEEB;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+  
+  #main-holder {
+    width: 95%;
+  background-color: #e0fbfc;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+  padding-bottom: 20px;
+  }
+  
+  .welcomepage_logo{
+      margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  width:10%;
+  }
+  
+  .first{
+    width: 30%;
+    margin-top: 50px;
+    float: left;
+  
+  }
+  
+  .second{
+    width: 30%;
+    margin-top: 50px;
+  clear: both;
+  }
+  
+  
+  .container{
+  margin-left: 20px;
+  margin-right: 0px;
+  }
+  
+  .title{
+    text-align: center;
+  }
+  
+  hr{
+    margin-top: 50px;
+  }
+  /*this code is used for the app copyright */
+  .copyright1{
+      font-family: tahoma;
+      font-weight: bold;
+      font-style: normal;
+      text-align: center;
+  
+  }
+  
+  .hidden{
+    display : none;
+  }
+  
+  .button1{
+  
+      margin-top:50px;
+      font-size: 20px; 
+      padding:50px; 
+      font-weight:bold; 
+    }
+  
+    .button1:hover {
+      background-color: yellowgreen;
+      color: white;
+    }
+  
+    input{
+      background-color:#98c1d9;
+  font: bold;
+  color: black;
+    }
+  
+
+  
+    input, [type="text"]{
+      width:25% ;
+      padding-left: 10px;
+    }
+  
+    input, [type="date"]{
+      width:10% ;
+    }
+  
+    .super{
+      font-weight: bold;
+      font-size: 7vh;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+  .clear{
+    clear: both;
+  }
+  
+  .note{
+  border: ridge;
+    border-right: 20px;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-left: 300px;
+    color: red;
+  }
+  
+  
+  li{
+    float: left;
+   padding-left: 60px;
+  list-style-type: none;
+  }
+  
+  .titleheader{
+    margin-left: 300px; 
+    margin-bottom: 20px; 
+    font-size: 40px;
+  }
+  
+  .topheader{
+    display: none;
+  }
+  
+    } 
+    
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) { 
+  
+        html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #87CEEB;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+  
+  #main-holder {
+    width: 95%;
+  background-color: #e0fbfc;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+  padding-bottom: 20px;
+  }
+  
+  .welcomepage_logo{
+      margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  width:10%;
+  }
+  
+  .first{
+    width: 30%;
+    margin-top: 50px;
+    float: left;
+  
+  }
+  
+  .second{
+    width: 30%;
+    margin-top: 50px;
+  clear: both;
+  }
+  
+  
+  .container{
+  margin-left: 20px;
+  margin-right: 0px;
+  }
+  
+  .title{
+    text-align: center;
+  }
+  
+  hr{
+    margin-top: 50px;
+  }
+  /*this code is used for the app copyright */
+  .copyright1{
+      font-family: tahoma;
+      font-weight: bold;
+      font-style: normal;
+      text-align: center;
+  
+  }
+  
+  .hidden{
+    display : none;
+  }
+  
+  .button1{
+  
+      margin-top:50px;
+      font-size: 20px; 
+      padding:50px; 
+      font-weight:bold; 
+    }
+  
+    .button1:hover {
+      background-color: yellowgreen;
+      color: white;
+    }
+  
+    input{
+      background-color:#98c1d9;
+  font: bold;
+  color: black;
+    }
+  
+
+  
+    input, [type="text"]{
+      width:25% ;
+      padding-left: 10px;
+    }
+  
+    input, [type="date"]{
+      width:10% ;
+    }
+  
+    .super{
+      font-weight: bold;
+      font-size: 7vh;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+  .clear{
+    clear: both;
+  }
+  
+  .note{
+  border: ridge;
+    border-right: 20px;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-left: 300px;
+    color: red;
+  }
+  
+  
+  li{
+    float: left;
+   padding-left: 60px;
+  list-style-type: none;
+  }
+  
+  .titleheader{
+    margin-left: 300px; 
+    margin-bottom: 20px; 
+    font-size: 40px;
+  }
+  
+
+  input::placeholder{
+  color: transparent;
+}
+    }
+  
+  
+  </style>
+
+
+<!------------------script for database-->
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+<script>
+  function SubForm (){
+  var inputs = document.getElementsByTagName('input');
+  var requiredFieldsFilled = true;
+
+  // Loop through each input element
+  for (var i = 0; i < inputs.length; i++) {
+    // Check if the input element is required and has no value
+    if (inputs[i].hasAttribute('required') && inputs[i].value.trim() === '') {
+      requiredFieldsFilled = false;
+      break; // Exit the loop, as we've found an empty required field
+    }
+  }
+
+  if (!requiredFieldsFilled) {
+    alert('Please fill in all required fields.');
+    return; // Prevent form submission
+  }
+    
+//Json libray code link for data storage
+      $.ajax({
+          url:"https://api.apispreadsheets.com/data/GDSbA9rccWB2Z0K7/",
+          type:"post",
+          data:$("#myForm").serializeArray(),
+          success: function(){
+              alert("successful!")
+
+        // Clear the values of all required input fields and read-only fields
+        var inputs = document.querySelectorAll('input[required], input[readonly]');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].value = ''; // Clear the value of the required or readonly field
+        }
+          },
+          error: function(){
+              alert("No Network Connection:(error")
+          }
+      });
+  }
+  </script>
+
+
+<!---------------------------------script arithmetic-->
+<script>
+  function calculate() {
+    for (var i = 1; i <= 13; i++) {
+      var sum = 0;
+
+      for (var j = 1; j <= 5; j++) {
+        var inputId = 'num' + i + '_' + j;
+        var input = document.getElementById(inputId);
+        var number = parseFloat(input.value);
+
+        if (number > 20) {
+          input.value = ""; // Clear the input value
+          break;
+        }
+
+        sum += number;
+      }
+
+      var result = sum;
+      var resultId = 'result' + i;
+      document.getElementById(resultId).value = isNaN(result) ? '' : result;
+    }
+  }
+</script>
+
+
+
+<body>
+
+  <div class="back">
+    <a href="welcome_page.html"><---Previous Page</a> 
+   </div>
+
+  <main id="main-holder">
+  
+    <div><img src="../images/welcomepage_logo.png" alt="welcomepage_logo" class="welcomepage_logo" ></div>
+    <div class="titleheader">SUPERVISORS STAFF EVALUATION</div>
+    <div class="note">
+|: Every criteria has 20 marks each, and the average score is 100 <br>
+Data can only be sent once per day<br>
+Second response will be set invaild.
+    </div>
+    <div class="clear"></div>
+<div class="container">
+<section>
+ <form  id="myForm" >
+  <header><input type="date" name="data_sup" id="dateInput" min="" style="font-weight: bold; margin-bottom: 20px;" required></header>
+
+  <div style="float: left;">
+    <div class="topheader" style="font-weight: bold; ">
+      <p style="float: left; padding-left: 10px;">Names</p>
+      <p style="float: left; padding-left: 280px;">Time mgt</p>
+      <p style="float: left; padding-left: 40px;">Target/Productivity</p>
+      <p style="float: left; padding-left: 10px;">Quality of Work</p>
+      <p style="float: left; padding-left: 40px;">Safety</p>
+      <p style="float: left; padding-left: 90px;">Morale</p>
+      <p style="float: left; padding-left: 55px;">Average Score</p>
+       </div>
+       <div class="clear"></div>
+       <div>
+<input type="text" id=""  value="SULE AHMED" name="" disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num1_1" oninput="calculate()" name="6043_time_mgt" style=" color: red;" placeholder="Time Management" required>
+
+  <input type="number" id="num1_2" oninput="calculate()" name="6043_target_productivity" style=" color: red;" placeholder="Target Productivity" required>
+
+  <input type="number" id="num1_3" oninput="calculate()" name="6043_quality_of_work" style=" color: red;" placeholder="Quality of Work" required>
+
+  <input type="number" id="num1_4" oninput="calculate()" name="6043_safety" style=" color: red;" placeholder="Safety" required>
+
+  <input type="number" id="num1_5" oninput="calculate()" name="6043_morale" style=" color: red;" placeholder="Morale" required>
+
+  <input type="number" id="result1" name="6043_average_score_sv" style=" color: red;" placeholder="Average Score"  readonly>
+
+</div>
+<!---------------->
+
+<br>
+<div>
+<input type="text" name="" id=""  value="FAGBEMISOYE MAYOMI"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num2_1" oninput="calculate()" name="3434_time_mgt" style=" color: red;" placeholder="Time Management" required>
+
+<input type="number" id="num2_2" oninput="calculate()" name="3434_target_productivity" style=" color: red;" placeholder="Target Productivity" required>
+
+<input type="number" id="num2_3" oninput="calculate()" name="3434_quality_of_work" style=" color: red;" placeholder="Quality of Work" required>
+
+<input type="number" id="num2_4" oninput="calculate()" name="3434_safety" style=" color: red;" placeholder="Safety" required>
+
+<input type="number" id="num2_5" oninput="calculate()" name="3434_morale" style=" color: red;" placeholder="Morale" required>
+
+<input type="number" id="result2" name="3434_average_score_sv" style=" color: red;" placeholder="Average Score" readonly>
+
+</div>
+<!---------------->
+
+<br>
+
+<div>
+<input type="text" name="" id=""  value="ADEWOYE GEORGE T"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num3_1" oninput="calculate()" name="6042_time_mgt" style=" color: red;" placeholder="Time Management" required>
+
+<input type="number" id="num3_2" oninput="calculate()" name="6042_target_productivity" style=" color: red;" placeholder="Target Productivity" required>
+
+<input type="number" id="num3_3" oninput="calculate()" name="6042_quality_of_work" style=" color: red;" placeholder="Quality of Work" required>
+
+<input type="number" id="num3_4" oninput="calculate()" name="6042_safety" style=" color: red;" placeholder="Safety" required>
+
+<input type="number" id="num3_5" oninput="calculate()" name="6042_morale" style=" color: red;" placeholder="Morale" required>
+
+<input type="number" id="result3" name="6042_average_score_sv" style=" color: red;" placeholder="Average Score" readonly>
+
+</div>
+<!---------------->
+<br>
+
+
+<div>
+<input type="text" name="" id=""  value="UMEIZU INNOCENT EBUKA"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num4_1" oninput="calculate()" name="6846_time_mgt" style=" color: red;" placeholder="Time Management" required>
+
+<input type="number" id="num4_2" oninput="calculate()" name="6846_target_productivity" style=" color: red;" placeholder="Target Productivity" required>
+
+<input type="number" id="num4_3" oninput="calculate()" name="6846_quality_of_work" style=" color: red;" placeholder="Quality of Work" required>
+
+<input type="number" id="num4_4" oninput="calculate()" name="6846_safety" style=" color: red;" placeholder="Safety" required>
+
+<input type="number" id="num4_5" oninput="calculate()" name="6846_morale" style=" color: red;" placeholder="Morale" required>
+
+<input type="number" id="result4" name="6846_average_score_sv" style=" color: red;" placeholder="Average Score" readonly>
+
+</div>
+<!---------------->
+<br>
+
+<div>
+<input type="text" name="" id=""  value="SHOGUNLE SEGUN JAMES"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num5_1" oninput="calculate()" name="7733_time_mgt" style=" color: red;" placeholder="Time Management" required>
+
+<input type="number" id="num5_2" oninput="calculate()" name="7733_target_productivity" style=" color: red;" placeholder="Target Productivity"  required>
+
+<input type="number" id="num5_3" oninput="calculate()" name="7733_quality_of_work" style=" color: red;" placeholder="Quality of Work" required>
+
+<input type="number" id="num5_4" oninput="calculate()" name="7733_safety" style=" color: red;" placeholder="Safety" required>
+
+<input type="number" id="num5_5" oninput="calculate()" name="7733_morale" style=" color: red;" placeholder="Morale" required>
+
+<input type="number" id="result5" name="7733_average_score_sv" style=" color: red;" placeholder="Average Score" readonly>
+
+</div>
+<!---------------->
+<br>
+
+
+<div>
+    <input type="text" id=""  value="FAKOYA ADETOLA " name="" disabled style="font-weight: bold; background-color: #293241; color: white;">
+      <input type="number" id="num6_1" oninput="calculate()" name="6983_time_mgt" style=" color: red;" placeholder="Time Management" required>
+    
+      <input type="number" id="num6_2" oninput="calculate()" name="6983_target_productivity" style=" color: red;" placeholder="Target Productivity" required>
+    
+      <input type="number" id="num6_3" oninput="calculate()" name="6983_quality_of_work" style=" color: red;" placeholder="Quality of Work" required>
+    
+      <input type="number" id="num6_4" oninput="calculate()" name="6983_safety" style=" color: red;" placeholder="Safety" required>
+    
+      <input type="number" id="num6_5" oninput="calculate()" name="6983_morale" style=" color: red;" placeholder="Morale" required>
+    
+      <input type="number" id="result6" name="6983_average_score_sv" style=" color: red;" placeholder="Average Score" readonly>
+    
+    </div>
+    <!---------------->
+    
+    <br>
+    <div>
+    <input type="text" name="" id=""  value="JULIUS ATAKE"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+    <input type="number" id="num7_1" oninput="calculate()" name="7101_time_mgt" style=" color: red;" placeholder="Time Management" required>
+    
+    <input type="number" id="num7_2" oninput="calculate()" name="7101_target_productivity" style=" color: red;" placeholder="Target Productivity" required>
+    
+    <input type="number" id="num7_3" oninput="calculate()" name="7101_quality_of_work" style=" color: red;" placeholder="Quality of Work" required>
+    
+    <input type="number" id="num7_4" oninput="calculate()" name="7101_safety" style=" color: red;" placeholder="Safety" required>
+    
+    <input type="number" id="num7_5" oninput="calculate()" name="7101_morale" style=" color: red;" placeholder="Morale" required>
+    
+    <input type="number" id="result7" name="7101_average_score_sv" style=" color: red;" placeholder="Average Score" readonly>
+    
+    </div>
+    <!---------------->
+    
+    <br>
+    
+    <div>
+    <input type="text" name="" id=""  value="YAKUB FAIDAT OLUWATOMISIN"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+    <input type="number" id="num8_1" oninput="calculate()" name="100528_time_mgt" style=" color: red;" placeholder="Time Management" required>
+    
+    <input type="number" id="num8_2" oninput="calculate()" name="100528_target_productivity" style=" color: red;" placeholder="Target Productivity" required>
+    
+    <input type="number" id="num8_3" oninput="calculate()" name="100528_quality_of_work" style=" color: red;" placeholder="Quality of Work" required>
+    
+    <input type="number" id="num8_4" oninput="calculate()" name="1005289_safety" style=" color: red;" placeholder="Safety" required>
+    
+    <input type="number" id="num8_5" oninput="calculate()" name="100528_morale" style=" color: red;" placeholder="Morale" required>
+    
+    <input type="number" id="result8" name="100528_average_score_sv" style=" color: red;" placeholder="Average Score" readonly>
+    
+    </div>
+    <!---------------->
+    <br>
+    <div>
+      <input type="text" id=""  value="AJIBOLA PAPA" name="" disabled style="font-weight: bold; background-color: #293241; color: white;">
+        <input type="number" id="num9_1" oninput="calculate()" name="5830_takt_time" style=" color: red;" placeholder="Time Management" required>
+      
+        <input type="number" id="num9_2" oninput="calculate()" name="5830_efficiency" style=" color: red;" placeholder="Target Productivity" required>
+      
+        <input type="number" id="num9_3" oninput="calculate()" name="5830_quality_of_work" style=" color: red;" placeholder="Quality of Work" required>
+      
+        <input type="number" id="num9_4" oninput="calculate()" name="5830_time_mgt" style=" color: red;" placeholder="Safety" required>
+      
+        <input type="number" id="num9_5" oninput="calculate()" name="5830_daily_target" style=" color: red;" placeholder="Morale" required>
+      
+        <input type="number" id="result9" name="5830_average_score_sv" style=" color: red;"  readonly placeholder="Average Score">
+      
+      </div>
+      <!---------------->
+      
+      <br>
+      <div>
+      <input type="text" name="" id=""  value="ADENIYI LAWRENCE"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+      <input type="number" id="num10_1" oninput="calculate()" name="6241_takt_time" style=" color: red;" placeholder="Time Management" required>
+      
+      <input type="number" id="num10_2" oninput="calculate()" name="6241_efficiency" style=" color: red;" placeholder="Target Productivity" required>
+      
+      <input type="number" id="num10_3" oninput="calculate()" name="6241_quality_of_work" style=" color: red;" placeholder="Quality of Work" required >
+      
+      <input type="number" id="num10_4" oninput="calculate()" name="6241_time_mgt" style=" color: red;" placeholder="Safety" required >
+      
+      <input type="number" id="num10_5" oninput="calculate()" name="6241_daily_target" style=" color: red;" placeholder="Morale" required >
+      
+      <input type="number" id="result10" name="6241_average_score_sv" style=" color: red;"  readonly placeholder="Average Score">
+      
+      </div>
+      <!---------------->
+      
+      <br>
+      
+      <div>
+      <input type="text" name="" id=""  value="BELLO SIKIRAT"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+      <input type="number" id="num11_1" oninput="calculate()" name="6509_takt_time" style=" color: red;" placeholder="Time Management" required>
+      
+      <input type="number" id="num11_2" oninput="calculate()" name="6509_efficiency" style=" color: red;" placeholder="Target Productivity" required>
+      
+      <input type="number" id="num11_3" oninput="calculate()" name="6509_quality_of_work" style=" color: red;" placeholder="Quality of Work" required >
+      
+      <input type="number" id="num11_4" oninput="calculate()" name="6509_time_mgt" style=" color: red;" placeholder="Safety" required>
+      
+      <input type="number" id="num11_5" oninput="calculate()" name="6509_daily_target" style=" color: red;" placeholder="Morale" required >
+      
+      <input type="number" id="result11" name="6509_average_score_sv" style=" color: red;"  readonly placeholder="Average Score">
+      
+      </div>
+      <!---------------->
+      <br>
+      
+      
+      <div>
+      <input type="text" name="" id=""  value="EZEKOKA CHIDINMA FRANCISCA"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+      <input type="number" id="num12_1" oninput="calculate()" name="8363_takt_time" style=" color: red;" placeholder="Time Management" required>
+      
+      <input type="number" id="num12_2" oninput="calculate()" name="8363_efficiency" style=" color: red;" placeholder="Target Productivity" required >
+      
+      <input type="number" id="num12_3" oninput="calculate()" name="8363_quality_of_work" style=" color: red;" placeholder="Quality of Work" required >
+      
+      <input type="number" id="num12_4" oninput="calculate()" name="8363_time_mgt" style=" color: red;" placeholder="Safety" required >
+      
+      <input type="number" id="num12_5" oninput="calculate()" name="8363_daily_target" style=" color: red;" placeholder="Morale" required >
+      
+      <input type="number" id="result12" name="8363_average_score_sv" style=" color: red;"  readonly placeholder="Average Score">
+      
+      </div>
+      <!---------------->
+      <br>
+      
+      <div>
+      <input type="text" name="" id=""  value="ADESUNMIBOYE RUKAYAT OLAMIDE"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+      <input type="number" id="num13_1" oninput="calculate()" name="8592_takt_time" style=" color: red;" placeholder="Time Management" required>
+      
+      <input type="number" id="num13_2" oninput="calculate()" name="8592_efficiency" style=" color: red;" placeholder="Target Productivity" required >
+      
+      <input type="number" id="num13_3" oninput="calculate()" name="8592_quality_of_work" style=" color: red;" placeholder="Quality of Work"  required >
+      
+      <input type="number" id="num13_4" oninput="calculate()" name="8592_time_mgt" style=" color: red;" placeholder="Safety"  required >
+      
+      <input type="number" id="num13_5" oninput="calculate()" name="8592_daily_target" style=" color: red;" placeholder="Morale" required >
+      
+      <input type="number" id="result13" name="8592_average_score_sv" style=" color: red;"  readonly placeholder="Average Score">
+      
+      </div>
+    
+
+
+  </div>
+
+</form>
+
+</section>
+
+  </main>
+
+  <div class="clear"></div>
+  <div >
+    <button  class="button1" type="submit" onclick='SubForm()'>Submit</button>
+  
+  </div>
+
+
+
+  <div class="clear"></div>
+  <footer>  
+       <hr>
+<div class="copyright1">
+ <small>copyright&copy;2023Mikano</small> 
+</div>
+
+</footer>
+  
+</body>
+<script>
+  // Get the current date and format it as YYYY-MM-DD
+  const today = new Date();
+const year = today.getFullYear();
+const month = String(today.getMonth() + 1).padStart(2, '0');
+const day = String(today.getDate()).padStart(2, '0');
+const currentDate = `${year}-${month}-${day}`;
+
+// Set the date input's value to the current date
+const dateInput = document.getElementById('dateInput');
+dateInput.value = currentDate;
+
+// Set the min and max attributes to the current date
+dateInput.min = currentDate;
+dateInput.max = currentDate;
+</script>
+
+</html>
