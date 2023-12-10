@@ -3,7 +3,7 @@ Human Resource Process Software(HRPS) is a software that keeps record the staff 
 Also used for the Key Performance  Indicator(KPI). 
 This software can be converted for both desktop and mobile. 
 
-- **Programming Languages:** P JavaScript
+- **Programming Languages:**  JavaScript
 - **Database:** google drive, spreadsheet API
 - **Tools:**  VS Code
 
