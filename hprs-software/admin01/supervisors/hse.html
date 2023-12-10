@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRPS</title>
+  <link rel="stylesheet" href="./css/main.css"/>
+  <link rel="shortcut icon" href="./icons/mikano_logo.png">
+</head>
+
+<style>
+
+  /*@media queries for the page */
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) and (max-width: 599px) {
+  
+        html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #87CEEB;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+  
+  #main-holder {
+    width: 95%;
+  background-color: #e0fbfc;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+  padding-bottom: 20px;
+  }
+  
+  .welcomepage_logo{
+      margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  
+  }
+  
+  .first{
+    width: 30%;
+    margin-top: 50px;
+    float: left;
+  
+  }
+  
+  .second{
+    width: 30%;
+    margin-top: 50px;
+  clear: both;
+  }
+  
+  
+  .container{
+  margin-left: 40px;
+  margin-right: 0px;
+  }
+  
+  .title{
+    text-align: center;
+  }
+  
+  hr{
+    margin-top: 50px;
+  }
+  /*this code is used for the app copyright */
+  .copyright1{
+      font-family: tahoma;
+      font-weight: bold;
+      font-style: normal;
+      text-align: center;
+  
+  }
+  
+  .hidden{
+    display : none;
+  }
+  
+  .button1{
+  
+      margin-top:50px;
+      font-size: 20px; 
+      padding:50px; 
+      font-weight:bold; 
+    }
+  
+    .button1:hover {
+      background-color: yellowgreen;
+      color: white;
+    }
+  
+    input{
+      background-color:#98c1d9;
+  font: bold;
+  color: black;
+    }
+    input, [type="text"]{
+      width:75% ;
+      padding-left: 10px;
+    }
+  
+    input, [type="date"]{
+      width:30% ;
+    }
+  
+  
+  
+    .super{
+      font-weight: bold;
+      font-size: 7vh;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+  .clear{
+    clear: both;
+  }
+  
+  
+  
+  li{
+    float: left;
+   padding-left: 50px;
+  list-style-type: none;
+  }
+  
+  .topheader{
+    display: none;
+  }
+  
+  .titleheader{
+  text-align: center;
+    margin-bottom: 20px; 
+    font-size: 20px;
+  }
+  
+  .note{
+  border: ridge;
+    border-right: 20px;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-left: 10px;
+    margin-bottom:10px; 
+    color: red;
+  }
+  
+  ::placeholder{
+  color: black;
+  font-weight: bold;
+}
+  
+  }
+    
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) and (max-width: 699px) {
+  
+      html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #87CEEB;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+  
+  #main-holder {
+    width: 95%;
+  background-color: #e0fbfc;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+  padding-bottom: 20px;
+  }
+  
+  .welcomepage_logo{
+      margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  
+  }
+  
+  .first{
+    width: 30%;
+    margin-top: 50px;
+    float: left;
+  
+  }
+  
+  .second{
+    width: 30%;
+    margin-top: 50px;
+  clear: both;
+  }
+  
+  
+  .container{
+  margin-left: 40px;
+  margin-right: 0px;
+  }
+  
+  .title{
+    text-align: center;
+  }
+  
+  hr{
+    margin-top: 50px;
+  }
+  /*this code is used for the app copyright */
+  .copyright1{
+      font-family: tahoma;
+      font-weight: bold;
+      font-style: normal;
+      text-align: center;
+  
+  }
+  
+  .hidden{
+    display : none;
+  }
+  
+  .button1{
+  
+      margin-top:50px;
+      font-size: 20px; 
+      padding:50px; 
+      font-weight:bold; 
+    }
+  
+    .button1:hover {
+      background-color: yellowgreen;
+      color: white;
+    }
+  
+    input{
+      background-color:#98c1d9;
+  font: bold;
+  color: black;
+    }
+    input, [type="text"]{
+      width:75% ;
+      padding-left: 10px;
+    }
+  
+    input, [type="date"]{
+      width:30% ;
+    }
+  
+  
+  
+    .super{
+      font-weight: bold;
+      font-size: 7vh;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+  .clear{
+    clear: both;
+  }
+  
+  
+  
+  li{
+    float: left;
+   padding-left: 50px;
+  list-style-type: none;
+  }
+  
+  .topheader{
+    display: none;
+  }
+  
+  .titleheader{
+  text-align: center;
+    margin-bottom: 20px; 
+    font-size: 20px;
+  }
+  
+  .note{
+  border: ridge;
+    border-right: 20px;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-left: 10px;
+    margin-bottom:10px; 
+    color: red;
+  }
+  
+
+  ::placeholder{
+  color: black;
+  font-weight: bold;
+}
+  
+  }
+  
+  
+  /* Medium devices (landscape tablets, 700px and up) */
+  @media only screen and (min-width: 700px) and (max-width: 899px) {
+  
+    html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #87CEEB;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+  
+  #main-holder {
+    width: 95%;
+  background-color: #e0fbfc;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+  padding-bottom: 20px;
+  }
+  
+  .welcomepage_logo{
+      margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  
+  }
+  
+  .first{
+    width: 30%;
+    margin-top: 50px;
+    float: left;
+  
+  }
+  
+  .second{
+    width: 30%;
+    margin-top: 50px;
+  clear: both;
+  }
+  
+  
+  .container{
+  margin-left: 10px;
+  margin-right: 0px;
+  }
+  
+  .title{
+    text-align: center;
+  }
+  
+  hr{
+    margin-top: 50px;
+  }
+  /*this code is used for the app copyright */
+  .copyright1{
+      font-family: tahoma;
+      font-weight: bold;
+      font-style: normal;
+      text-align: center;
+  
+  }
+  
+  .hidden{
+    display : none;
+  }
+  
+  .button1{
+  
+      margin-top:50px;
+      font-size: 20px; 
+      padding:50px; 
+      font-weight:bold; 
+    }
+  
+    .button1:hover {
+      background-color: yellowgreen;
+      color: white;
+    }
+  
+    input{
+      background-color:#98c1d9;
+  font: bold;
+  color: black;
+    }
+    input, [type="text"]{
+      width:75% ;
+      padding-left: 10px;
+    }
+  
+    input, [type="date"]{
+      width:30% ;
+    }
+  
+  
+  
+    .super{
+      font-weight: bold;
+      font-size: 7vh;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+  .clear{
+    clear: both;
+  }
+  
+  
+  
+  li{
+    float: left;
+   padding-left: 50px;
+  list-style-type: none;
+  }
+  
+  .topheader{
+    display: none;
+  }
+  
+  .titleheader{
+  text-align: center;
+    margin-bottom: 20px; 
+    font-size: 20px;
+  }
+  
+  .note{
+  border: ridge;
+    border-right: 20px;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-left: 10px;
+    margin-bottom:10px; 
+    color: red;
+  }
+  
+  
+  
+  
+    } 
+  
+    
+    /* Large devices (laptops/desktops, 900px and up) */
+    @media only screen and (min-width: 900px) and (max-width: 1199px) {
+  
+      html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #87CEEB;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+  
+  #main-holder {
+    width: 95%;
+  background-color: #e0fbfc;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+  padding-bottom: 20px;
+  }
+  
+  .welcomepage_logo{
+      margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  width:10%;
+  }
+  
+  .first{
+    width: 30%;
+    margin-top: 50px;
+    float: left;
+  
+  }
+  
+  .second{
+    width: 30%;
+    margin-top: 50px;
+  clear: both;
+  }
+  
+  
+  .container{
+  margin-left: 20px;
+  margin-right: 0px;
+  }
+  
+  .title{
+    text-align: center;
+  }
+  
+  hr{
+    margin-top: 50px;
+  }
+  /*this code is used for the app copyright */
+  .copyright1{
+      font-family: tahoma;
+      font-weight: bold;
+      font-style: normal;
+      text-align: center;
+  
+  }
+  
+  .hidden{
+    display : none;
+  }
+  
+  .button1{
+  
+      margin-top:50px;
+      font-size: 20px; 
+      padding:50px; 
+      font-weight:bold; 
+    }
+  
+    .button1:hover {
+      background-color: yellowgreen;
+      color: white;
+    }
+  
+    input{
+      background-color:#98c1d9;
+  font: bold;
+  color: black;
+    }
+  
+ 
+  
+    input, [type="text"]{
+      width:25% ;
+      padding-left: 10px;
+    }
+  
+    input, [type="date"]{
+      width:10% ;
+    }
+  
+    .super{
+      font-weight: bold;
+      font-size: 7vh;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+  .clear{
+    clear: both;
+  }
+  
+  .note{
+  border: ridge;
+    border-right: 20px;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-left: 300px;
+    color: red;
+  }
+  
+  
+  li{
+    float: left;
+   padding-left: 60px;
+  list-style-type: none;
+  }
+  
+  .titleheader{
+    margin-left: 300px; 
+    margin-bottom: 20px; 
+    font-size: 40px;
+  }
+  
+  .topheader{
+    display: none;
+  }
+  
+    } 
+    
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) { 
+  
+        html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #87CEEB;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+  
+  #main-holder {
+    width: 95%;
+  background-color: #e0fbfc;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+  padding-bottom: 20px;
+  }
+  
+  .welcomepage_logo{
+      margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  width:10%;
+  }
+  
+  .first{
+    width: 30%;
+    margin-top: 50px;
+    float: left;
+  
+  }
+  
+  .second{
+    width: 30%;
+    margin-top: 50px;
+  clear: both;
+  }
+  
+  
+  .container{
+  margin-left: 20px;
+  margin-right: 0px;
+  }
+  
+  .title{
+    text-align: center;
+  }
+  
+  hr{
+    margin-top: 50px;
+  }
+  /*this code is used for the app copyright */
+  .copyright1{
+      font-family: tahoma;
+      font-weight: bold;
+      font-style: normal;
+      text-align: center;
+  
+  }
+  
+  .hidden{
+    display : none;
+  }
+  
+  .button1{
+  
+      margin-top:50px;
+      font-size: 20px; 
+      padding:50px; 
+      font-weight:bold; 
+    }
+  
+    .button1:hover {
+      background-color: yellowgreen;
+      color: white;
+    }
+  
+    input{
+      background-color:#98c1d9;
+  font: bold;
+  color: black;
+    }
+  
+
+  
+    input, [type="text"]{
+      width:25% ;
+      padding-left: 10px;
+    }
+  
+    input, [type="date"]{
+      width:10% ;
+    }
+  
+    .super{
+      font-weight: bold;
+      font-size: 7vh;
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+  .clear{
+    clear: both;
+  }
+  
+  .note{
+  border: ridge;
+    border-right: 20px;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin-left: 300px;
+    color: red;
+  }
+  
+  
+  li{
+    float: left;
+   padding-left: 60px;
+  list-style-type: none;
+  }
+  
+  .titleheader{
+    margin-left: 300px; 
+    margin-bottom: 20px; 
+    font-size: 40px;
+  }
+    }
+  
+  
+  </style>
+
+
+<!------------------script for database-->
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+<script>
+  function SubForm (){
+  var inputs = document.getElementsByTagName('input');
+  var requiredFieldsFilled = true;
+
+  // Loop through each input element
+  for (var i = 0; i < inputs.length; i++) {
+    // Check if the input element is required and has no value
+    if (inputs[i].hasAttribute('required') && inputs[i].value.trim() === '') {
+      requiredFieldsFilled = false;
+      break; // Exit the loop, as we've found an empty required field
+    }
+  }
+
+  if (!requiredFieldsFilled) {
+    alert('Please fill in all required fields.');
+    return; // Prevent form submission
+  }
+    
+//Json libray code link for data storage
+      $.ajax({
+          url:"https://api.apispreadsheets.com/data/1rLwSxh0vsSQlT0p/",
+          type:"post",
+          data:$("#myForm").serializeArray(),
+          success: function(){
+              alert("successful!")
+          },
+          error: function(){
+              alert("No Network Connection:(error")
+          }
+      });
+  }
+  </script>
+
+
+<!---------------------------------script arithmetic-->
+<script>
+  function calculate() {
+    for (var i = 1; i <= 44; i++) {
+      var sum = 0;
+
+      for (var j = 1; j <= 5; j++) {
+        var inputId = 'num' + i + '_' + j;
+        var input = document.getElementById(inputId);
+        var number = parseFloat(input.value);
+
+        if (number > 9) {
+          input.value = ""; // Clear the input value
+          break;
+        }
+
+        sum += number;
+      }
+
+      var result = sum / 3;
+      var resultId = 'result' + i;
+      document.getElementById(resultId).value = isNaN(result) ? '' : result;
+    }
+  }
+</script>
+
+
+
+<body>
+  <main id="main-holder">
+  
+    <div><img src="../images/welcomepage_logo.png" alt="welcomepage_logo" class="welcomepage_logo" ></div>
+    <div class="titleheader" >HSE STAFF EVALUATION</div>
+    <div class="note">
+|:  Every criteria has 9 marks each. HSE has 15%. So you divide the total mark by 3. <br>
+Data can only be sent once per day<br>
+Second response will be set invaild.
+    </div>
+    <div class="clear"></div>
+<div class="container">
+<section>
+ <form  id="myForm" >
+  <header><input type="date" name="date_hr" id="dateInput" style="font-weight: bold; margin-bottom: 20px;" required></header>
+
+  <div  style="float: left;">
+    <div class="topheader" style="font-weight: bold; ">
+      <p style="float: left; padding-left: 10px;">Names</p>
+      <p style="float: left; padding-left: 300px;">PPE</p>
+      <p style="float: left; padding-left: 100px;">Hygiene</p>
+      <p style="float: left; padding-left: 45px;">Safety Meeting</p>
+      <p style="float: left; padding-left: 25px;">Safety Policy</p>
+      <p style="float: left; padding-left: 40px;">Corrective Action</p>
+      <p style="float: left; padding-left: 20px;">Average Score</p>
+       </div>
+       <div class="clear"></div>
+       <div>
+<input type="text" id=""  value="AJIBOLA PAPA" name="" disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num1_1" oninput="calculate()" name="5830_PPE" style=" color: red;" required placeholder="PPE">
+
+  <input type="number" id="num1_2" oninput="calculate()" name="5830_hygiene" style=" color: red;"  required placeholder="Hygiene">
+
+  <input type="number" id="num1_3" oninput="calculate()" name="5830_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+
+  <input type="number" id="num1_4" oninput="calculate()" name="5830_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+
+  <input type="number" id="num1_5" oninput="calculate()" name="5830_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+
+  <input type="number" id="result1" name="5830_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+
+</div>
+<!---------------->
+
+<br>
+<div>
+<input type="text" name="" id=""  value="ADENIYI LAWRENCE"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num2_1" oninput="calculate()" name="6241_PPE" style=" color: red;"  required placeholder="PPE">
+
+<input type="number" id="num2_2" oninput="calculate()" name="6241_hygiene" style=" color: red;"  required placeholder="Hygiene">
+
+<input type="number" id="num2_3" oninput="calculate()" name="6241_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+
+<input type="number" id="num2_4" oninput="calculate()" name="6241_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+
+<input type="number" id="num2_5" oninput="calculate()" name="6241_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+
+<input type="number" id="result2" name="6241_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+
+</div>
+<!---------------->
+
+<br>
+
+<div>
+<input type="text" name="" id=""  value="BELLO SIKIRAT"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num3_1" oninput="calculate()" name="6509_PPE" style=" color: red;"  required placeholder="PPE">
+
+<input type="number" id="num3_2" oninput="calculate()" name="6509_hygiene" style=" color: red;"  required placeholder="Hygiene">
+
+<input type="number" id="num3_3" oninput="calculate()" name="6509_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+
+<input type="number" id="num3_4" oninput="calculate()" name="6509_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+
+<input type="number" id="num3_5" oninput="calculate()" name="6509_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+
+<input type="number" id="result3" name="6509_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+
+</div>
+<!---------------->
+<br>
+
+
+<div>
+<input type="text" name="" id=""  value="EZEKOKA CHIDINMA FRANCISCA"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num4_1" oninput="calculate()" name="8363_PPE" style=" color: red;"  required placeholder="PPE">
+
+<input type="number" id="num4_2" oninput="calculate()" name="8363_hygiene" style=" color: red;"  required placeholder="Hygiene">
+
+<input type="number" id="num4_3" oninput="calculate()" name="8363_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+
+<input type="number" id="num4_4" oninput="calculate()" name="8363_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+
+<input type="number" id="num4_5" oninput="calculate()" name="8363_corrective_action" style=" color: red;"  required  placeholder="Corrective Action">
+
+<input type="number" id="result4" name="8363_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+
+</div>
+<!---------------->
+<br>
+
+<div>
+<input type="text" name="" id=""  value="ADESUNMIBOYE RUKAYAT OLAMIDE"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num5_1" oninput="calculate()" name="8592_PPE" style=" color: red;"  required placeholder="PPE">
+
+<input type="number" id="num5_2" oninput="calculate()" name="8592_hygiene" style=" color: red;"  required placeholder="Hygiene">
+
+<input type="number" id="num5_3" oninput="calculate()" name="8592_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+
+<input type="number" id="num5_4" oninput="calculate()" name="8592_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+
+<input type="number" id="num5_5" oninput="calculate()" name="8592_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+
+<input type="number" id="result5" name="8592_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+
+</div>
+<!---------------->
+<br>
+
+
+
+<div>
+    <input type="text" id=""  value="AMEH CHRISTOPHER" name="" disabled style="font-weight: bold; background-color: #293241; color: white;">
+      <input type="number" id="num6_1" oninput="calculate()" name="8265_PPE" style=" color: red;" required placeholder="PPE">
+    
+      <input type="number" id="num6_2" oninput="calculate()" name="8265_hygiene" style=" color: red;"  required placeholder="Hygiene">
+    
+      <input type="number" id="num6_3" oninput="calculate()" name="8265_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+    
+      <input type="number" id="num6_4" oninput="calculate()" name="8265_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+    
+      <input type="number" id="num6_5" oninput="calculate()" name="8265_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+    
+      <input type="number" id="result6" name="8265_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+    
+    </div>
+    <!---------------->
+    
+    <br>
+    <div>
+    <input type="text" name="" id=""  value="JOHN REBECCA EMMA"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+    <input type="number" id="num7_1" oninput="calculate()" name="6903_PPE" style=" color: red;"  required placeholder="PPE">
+    
+    <input type="number" id="num7_2" oninput="calculate()" name="6903_hygiene" style=" color: red;"  required placeholder="Hygiene">
+    
+    <input type="number" id="num7_3" oninput="calculate()" name="6903_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+    
+    <input type="number" id="num7_4" oninput="calculate()" name="6903_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+    
+    <input type="number" id="num7_5" oninput="calculate()" name="6903_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+    
+    <input type="number" id="result7" name="6903_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+    
+    </div>
+    <!---------------->
+    
+    <br>
+    
+    <div>
+    <input type="text" name="" id=""  value="SUNDAY T. MKPUMA"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+    <input type="number" id="num8_1" oninput="calculate()" name="7285_PPE" style=" color: red;"  required placeholder="PPE">
+    
+    <input type="number" id="num8_2" oninput="calculate()" name="7285_hygiene" style=" color: red;"  required placeholder="Hygiene">
+    
+    <input type="number" id="num8_3" oninput="calculate()" name="7285_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+    
+    <input type="number" id="num8_4" oninput="calculate()" name="72859_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+    
+    <input type="number" id="num8_5" oninput="calculate()" name="7285_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+    
+    <input type="number" id="result8" name="7285_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+    
+    </div>
+    <!---------------->
+    <br>
+    
+    
+    <div>
+    <input type="text" name="" id=""  value="CAROLINE OGUNKA"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+    <input type="number" id="num9_1" oninput="calculate()" name="7380_PPE" style=" color: red;"  required required placeholder="PPE">
+    
+    <input type="number" id="num9_2" oninput="calculate()" name="7380_hygiene" style=" color: red;"  required placeholder="Hygiene">
+    
+    <input type="number" id="num9_3" oninput="calculate()" name="7380_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+    
+    <input type="number" id="num9_4" oninput="calculate()" name="7380_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+    
+    <input type="number" id="num9_5" oninput="calculate()" name="7380_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+    
+    <input type="number" id="result9" name="7380_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+    
+    </div>
+    <!---------------->
+    <br>
+    
+    <div>
+    <input type="text" name="" id=""  value="UMEJE CHINASA"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+    <input type="number" id="num10_1" oninput="calculate()" name="7949_PPE" style=" color: red;"  required  placeholder="PPE">
+    
+    <input type="number" id="num10_2" oninput="calculate()" name="7949_hygiene" style=" color: red;"  required placeholder="Hygiene">
+    
+    <input type="number" id="num10_3" oninput="calculate()" name="7949_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+    
+    <input type="number" id="num10_4" oninput="calculate()" name="7949_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+    
+    <input type="number" id="num10_5" oninput="calculate()" name="7949_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+    
+    <input type="number" id="result10" name="7949_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+    
+    </div>
+    <!---------------->
+    <br>
+    
+    <div>
+    <input type="text" name="" id=""  value="JOSEPH RAHILA FUNMILAYO"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+    <input type="number" id="num11_1" oninput="calculate()" name="7950_PPE" style=" color: red;"  required  placeholder="PPE">
+    
+    <input type="number" id="num11_2" oninput="calculate()" name="7950_hygiene" style=" color: red;"  required  placeholder="Hygiene">
+    
+    <input type="number" id="num11_3" oninput="calculate()" name="7950_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+    
+    <input type="number" id="num11_4" oninput="calculate()" name="7950_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+    
+    <input type="number" id="num11_5" oninput="calculate()" name="7950_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+    
+    <input type="number" id="result11" name="7950_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+    
+    </div>
+    <!---------------->
+    <br>
+
+    <div>
+        <input type="text" name="" id=""  value="ADEROHUNMU SHERIFFDEEN"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+        <input type="number" id="num12_1" oninput="calculate()" name="8436_PPE" style=" color: red;"  required placeholder="PPE">
+        
+        <input type="number" id="num12_2" oninput="calculate()" name="8436_hygiene" style=" color: red;"  required placeholder="Hygiene">
+        
+        <input type="number" id="num12_3" oninput="calculate()" name="8436_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+        
+        <input type="number" id="num12_4" oninput="calculate()" name="8436_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+        
+        <input type="number" id="num12_5" oninput="calculate()" name="8436_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+        
+        <input type="number" id="result12" name="8436_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+        
+        </div>
+        <!---------------->
+        <br>
+
+<div>
+<input type="text" name="" id=""  value="AKALA AYODELE"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num13_1" oninput="calculate()" name="6129_PPE" style=" color: red;"  required placeholder="PPE">
+
+<input type="number" id="num13_2" oninput="calculate()" name="6129_hygiene" style=" color: red;"  required placeholder="Hygiene">
+
+<input type="number" id="num13_3" oninput="calculate()" name="6129_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+
+<input type="number" id="num13_4" oninput="calculate()" name="6129_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+
+<input type="number" id="num13_5" oninput="calculate()" name="6129_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+
+<input type="number" id="result13" name="6129_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+
+</div>
+<!---------------->
+
+<br>
+
+<div>
+<input type="text" name="" id=""  value="ADEDOKUN SEYI"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num14_1" oninput="calculate()" name="6157_PPE" style=" color: red;"  required placeholder="PPE">
+
+<input type="number" id="num14_2" oninput="calculate()" name="6157_hygiene" style=" color: red;"  required placeholder="Hygiene">
+
+<input type="number" id="num14_3" oninput="calculate()" name="6157_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+
+<input type="number" id="num14_4" oninput="calculate()" name="6157_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+
+<input type="number" id="num14_5" oninput="calculate()" name="6157_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+
+<input type="number" id="result14" name="6157_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+
+</div>
+<!---------------->
+<br>
+
+
+<div>
+<input type="text" name="" id=""  value="ADEYEMO ABIODUN"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num15_1" oninput="calculate()" name="6209_PPE" style=" color: red;"  required placeholder="PPE">
+
+<input type="number" id="num15_2" oninput="calculate()" name="6209_hygiene" style=" color: red;"  required placeholder="Hygiene">
+
+<input type="number" id="num15_3" oninput="calculate()" name="6209_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+
+<input type="number" id="num15_4" oninput="calculate()" name="6209_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+
+<input type="number" id="num15_5" oninput="calculate()" name="6209_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+
+<input type="number" id="result15" name="6209_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+
+</div>
+<!---------------->
+<br>
+
+<div>
+<input type="text" name="" id=""  value="OKOLIE CHIDI"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num16_1" oninput="calculate()" name="6215_PPE" style=" color: red;"  required placeholder="PPE">
+
+<input type="number" id="num16_2" oninput="calculate()" name="6215_hygiene" style=" color: red;"  required placeholder="Hygiene">
+
+<input type="number" id="num16_3" oninput="calculate()" name="6215_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+
+<input type="number" id="num16_4" oninput="calculate()" name="6215_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+
+<input type="number" id="num16_5" oninput="calculate()" name="6215_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+
+<input type="number" id="result16" name="6215_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+
+</div>
+<!---------------->
+<br>
+
+<div>
+<input type="text" name="" id=""  value="ATOYEBI SOLOMON"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num17_1" oninput="calculate()" name="6243_PPE" style=" color: red;"  required placeholder="PPE">
+
+<input type="number" id="num17_2" oninput="calculate()" name="6243_hygiene" style=" color: red;"  required placeholder="Hygiene">
+
+<input type="number" id="num17_3" oninput="calculate()" name="6243_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+
+<input type="number" id="num17_4" oninput="calculate()" name="6243_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+
+<input type="number" id="num17_5" oninput="calculate()" name="6243_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+
+<input type="number" id="result17" name="6243_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+
+</div>
+<!---------------->
+<br>
+
+<div>
+<input type="text" name="" id=""  value="LAWAL MUFTAU"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num18_1" oninput="calculate()" name="7269_PPE" style=" color: red;"  required placeholder="PPE">
+
+<input type="number" id="num18_2" oninput="calculate()" name="7269_hygiene" style=" color: red;"  required placeholder="Hygiene">
+
+<input type="number" id="num18_3" oninput="calculate()" name="7269_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+
+<input type="number" id="num18_4" oninput="calculate()" name="7269_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+
+<input type="number" id="num18_5" oninput="calculate()" name="7269_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+
+<input type="number" id="result18" name="7269_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+
+</div>
+<!---------------->
+<br>
+
+<div>
+<input type="text" name="" id=""  value="IGE OLURINADE"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num19_1" oninput="calculate()" name="7256_PPE" style=" color: red;"  required placeholder="PPE">
+
+<input type="number" id="num19_2" oninput="calculate()" name="7256_hygiene" style=" color: red;"  required placeholder="Hygiene">
+
+<input type="number" id="num19_3" oninput="calculate()" name="7256_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+
+<input type="number" id="num19_4" oninput="calculate()" name="7256_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+
+<input type="number" id="num19_5" oninput="calculate()" name="7256_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+
+<input type="number" id="result19" name="7256_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+
+</div>
+<!---------------->
+<br>
+
+
+<div>
+<input type="text" name="" id=""  value="OKUNADE OLADEPO"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+<input type="number" id="num20_1" oninput="calculate()" name="8260_PPE" style=" color: red;"  required placeholder="PPE">
+
+<input type="number" id="num20_2" oninput="calculate()" name="8260_hygiene" style=" color: red;"  required placeholder="Hygiene">
+
+<input type="number" id="num20_3" oninput="calculate()" name="8260_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+
+<input type="number" id="num20_4" oninput="calculate()" name="8260_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+
+<input type="number" id="num20_5" oninput="calculate()" name="8260_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+
+<input type="number" id="result20" name="8260_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+
+</div>
+<!---------------->
+<br>
+
+
+<div>
+  <input type="text" id=""  value="ABODUNRIN LAWRENCE" name="" disabled style="font-weight: bold; background-color: #293241; color: white;">
+    <input type="number" id="num21_1" oninput="calculate()" name="6939_PPE" style=" color: red;" required placeholder="PPE">
+  
+    <input type="number" id="num21_2" oninput="calculate()" name="6939_hygiene" style=" color: red;"  required placeholder="Hygiene">
+  
+    <input type="number" id="num21_3" oninput="calculate()" name="6939_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+    <input type="number" id="num21_4" oninput="calculate()" name="6939_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+    <input type="number" id="num21_5" oninput="calculate()" name="6939_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+  
+    <input type="number" id="result21" name="6939_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  
+  <br>
+  <div>
+  <input type="text" name="" id=""  value="OYEWOLE ABDULWAHEED ADIO"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num22_1" oninput="calculate()" name="6940_PPE" style=" color: red;"  required placeholder="PPE">
+  
+  <input type="number" id="num22_2" oninput="calculate()" name="6940_hygiene" style=" color: red;"  required placeholder="Hygiene">
+  
+  <input type="number" id="num22_3" oninput="calculate()" name="6940_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+  <input type="number" id="num22_4" oninput="calculate()" name="6940_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+  <input type="number" id="num22_5" oninput="calculate()" name="6940_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+  
+  <input type="number" id="result22" name="6940_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  
+  <br>
+  
+  <div>
+  <input type="text" name="" id=""  value="AYOTUNDE SAMUEL IYANU"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num23_1" oninput="calculate()" name="6941_PPE" style=" color: red;"  required placeholder="PPE">
+  
+  <input type="number" id="num23_2" oninput="calculate()" name="6941_hygiene" style=" color: red;"  required placeholder="Hygiene">
+  
+  <input type="number" id="num23_3" oninput="calculate()" name="6941_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+  <input type="number" id="num23_4" oninput="calculate()" name="6941_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+  <input type="number" id="num23_5" oninput="calculate()" name="6941_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+  
+  <input type="number" id="result23" name="6941_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  <br>
+  
+  
+  <div>
+  <input type="text" name="" id=""  value="OGUNNIYI FEMI ADENIYI"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num24_1" oninput="calculate()" name="8119_PPE" style=" color: red;"  required placeholder="PPE">
+  
+  <input type="number" id="num24_2" oninput="calculate()" name="8119_hygiene" style=" color: red;"  required placeholder="Hygiene">
+  
+  <input type="number" id="num24_3" oninput="calculate()" name="8119_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+  <input type="number" id="num24_4" oninput="calculate()" name="8119_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+  <input type="number" id="num24_5" oninput="calculate()" name="8119_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+  
+  <input type="number" id="result24" name="8119_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  <br>
+  
+  <div>
+  <input type="text" name="" id=""  value="ASUELIMEHEN GODR"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num25_1" oninput="calculate()" name="6158_PPE" style=" color: red;"  required placeholder="PPE">
+  
+  <input type="number" id="num25_2" oninput="calculate()" name="6158_hygiene" style=" color: red;"  required placeholder="Hygiene">
+  
+  <input type="number" id="num25_3" oninput="calculate()" name="6158_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+  <input type="number" id="num25_4" oninput="calculate()" name="6158_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+  <input type="number" id="num25_5" oninput="calculate()" name="6158_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+  
+  <input type="number" id="result25" name="6158_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  
+  <br>
+  
+  <div>
+  <input type="text" name="" id=""  value="ISHOLA RASHEED A"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num26_1" oninput="calculate()" name="6162_PPE" style=" color: red;"  required placeholder="PPE">
+  
+  <input type="number" id="num26_2" oninput="calculate()" name="6162_hygiene" style=" color: red;"  required placeholder="Hygiene">
+  
+  <input type="number" id="num26_3" oninput="calculate()" name="6162_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+  <input type="number" id="num26_4" oninput="calculate()" name="6162_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+  <input type="number" id="num26_5" oninput="calculate()" name="6162_corrective_action" style=" color: red;"  required  placeholder="Corrective Action">
+  
+  <input type="number" id="result26" name="6162_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  <br>
+  
+  
+  <div>
+  <input type="text" name="" id=""  value="AKANMU IDOWU S."  disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num27_1" oninput="calculate()" name="6170_PPE" style=" color: red;"  required placeholder="PPE">
+  
+  <input type="number" id="num27_2" oninput="calculate()" name="6170_hygiene" style=" color: red;"  required placeholder="Hygiene">
+  
+  <input type="number" id="num27_3" oninput="calculate()" name="6170_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+  <input type="number" id="num27_4" oninput="calculate()" name="6170_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+  <input type="number" id="num27_5" oninput="calculate()" name="6170_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+  
+  <input type="number" id="result27" name="6170_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  <br>
+  
+  <div>
+  <input type="text" name="" id=""  value="OYEDOKUN MATTHEW"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num28_1" oninput="calculate()" name="6263_PPE" style=" color: red;"  required placeholder="PPE">
+  
+  <input type="number" id="num28_2" oninput="calculate()" name="6263_hygiene" style=" color: red;"  required placeholder="Hygiene">
+  
+  <input type="number" id="num28_3" oninput="calculate()" name="6263_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+  <input type="number" id="num28_4" oninput="calculate()" name="6263_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+  <input type="number" id="num28_5" oninput="calculate()" name="6263_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+  
+  <input type="number" id="result28" name="6263_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  <br>
+  
+  <div>
+  <input type="text" name="" id=""  value="AYATU SALIHU"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num29_1" oninput="calculate()" name="6447_PPE" style=" color: red;"  required placeholder="PPE">
+  
+  <input type="number" id="num29_2" oninput="calculate()" name="6447_hygiene" style=" color: red;"  required placeholder="Hygiene">
+  
+  <input type="number" id="num29_3" oninput="calculate()" name="6447_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+  <input type="number" id="num29_4" oninput="calculate()" name="6447_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+  <input type="number" id="num29_5" oninput="calculate()" name="6447_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+  
+  <input type="number" id="result29" name="6447_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  <br>
+  
+  <div>
+  <input type="text" name="" id=""  value="OGUNYEMI ADENIYI OLAYINKA"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num30_1" oninput="calculate()" name="6932_PPE" style=" color: red;"  required placeholder="PPE">
+  
+  <input type="number" id="num30_2" oninput="calculate()" name="6932_hygiene" style=" color: red;"  required placeholder="Hygiene">
+  
+  <input type="number" id="num30_3" oninput="calculate()" name="6932_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+  <input type="number" id="num30_4" oninput="calculate()" name="6932_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+  <input type="number" id="num30_5" oninput="calculate()" name="6932_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+  
+  <input type="number" id="result30" name="6932_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  <br>
+  
+  <div>
+  <input type="text" name="" id=""  value="ADENIYI OMOSOLA AKEREDOLU"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num31_1" oninput="calculate()" name="7223_PPE" style=" color: red;"  required placeholder="PPE">
+  
+  <input type="number" id="num31_2" oninput="calculate()" name="7223_hygiene" style=" color: red;"  required placeholder="Hygiene">
+  
+  <input type="number" id="num31_3" oninput="calculate()" name="7223_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+  <input type="number" id="num31_4" oninput="calculate()" name="7223_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+  <input type="number" id="num31_5" oninput="calculate()" name="7223_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+  
+  <input type="number" id="result31" name="7223_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  <br>
+  
+  
+  <div>
+  <input type="text" name="" id=""  value="IPUOYA MONDAY"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num32_1" oninput="calculate()" name="7312_PPE" style=" color: red;"  required placeholder="PPE">
+  
+  <input type="number" id="num32_2" oninput="calculate()" name="7312_hygiene" style=" color: red;"  required placeholder="Hygiene">
+  
+  <input type="number" id="num32_3" oninput="calculate()" name="7312_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+  <input type="number" id="num32_4" oninput="calculate()" name="7312_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+  <input type="number" id="num32_5" oninput="calculate()" name="7312_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+  
+  <input type="number" id="result32" name="7312_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  <br>
+  
+  
+  <div>
+  <input type="text" name="" id=""  value="AWOYEMI THOMAS"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num33_1" oninput="calculate()" name="7314_PPE" style=" color: red;"  required placeholder="PPE" >
+  
+  <input type="number" id="num33_2" oninput="calculate()" name="7314_hygiene" style=" color: red;"  required  placeholder="Hygiene">
+  
+  <input type="number" id="num33_3" oninput="calculate()" name="7314_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+  <input type="number" id="num33_4" oninput="calculate()" name="7314_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+  <input type="number" id="num33_5" oninput="calculate()" name="7314_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+  
+  <input type="number" id="result33" name="7314_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  <br>
+  
+  
+  <div>
+  <input type="text" name="" id=""  value="ATOYEBI LEKAN"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num34_1" oninput="calculate()" name="7368_PPE" style=" color: red;"  required placeholder="PPE">
+  
+  <input type="number" id="num34_2" oninput="calculate()" name="7368_hygiene" style=" color: red;"  required placeholder="Hygiene">
+  
+  <input type="number" id="num34_3" oninput="calculate()" name="7368_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+  <input type="number" id="num34_4" oninput="calculate()" name="7368_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+  <input type="number" id="num34_5" oninput="calculate()" name="7368_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+  
+  <input type="number" id="result34" name="7368_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  <br>
+  
+  
+  <div>
+  <input type="text" name="" id=""  value="ARISONYIN TAIWO LAWRENCE"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+  <input type="number" id="num35_1" oninput="calculate()" name="7273_PPE" style=" color: red;"  required placeholder="PPE">
+  
+  <input type="number" id="num35_2" oninput="calculate()" name="7273_hygiene" style=" color: red;"  required placeholder="Hygiene">
+  
+  <input type="number" id="num35_3" oninput="calculate()" name="7273_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+  
+  <input type="number" id="num35_4" oninput="calculate()" name="7273_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+  
+  <input type="number" id="num35_5" oninput="calculate()" name="7273_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+  
+  <input type="number" id="result35" name="7273_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+  
+  </div>
+  <!---------------->
+  <br>
+
+
+
+  <div>
+    <input type="text" id=""  value="NWAGWO HENRY" name="" disabled style="font-weight: bold; background-color: #293241; color: white;">
+      <input type="number" id="num36_1" oninput="calculate()" name="6242_PPE" style=" color: red;" required placeholder="PPE">
+    
+      <input type="number" id="num36_2" oninput="calculate()" name="6242_hygiene" style=" color: red;"  required placeholder="Hygiene">
+    
+      <input type="number" id="num36_3" oninput="calculate()" name="6242_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+    
+      <input type="number" id="num36_4" oninput="calculate()" name="6242_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+    
+      <input type="number" id="num36_5" oninput="calculate()" name="6242_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+    
+      <input type="number" id="result36" name="6242_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+    
+    </div>
+    <!---------------->
+    
+    <br>
+    <div>
+    <input type="text" name="" id=""  value="IZUAGHA CHIEMENA VICTOR"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+    <input type="number" id="num37_1" oninput="calculate()" name="6648_PPE" style=" color: red;"  required placeholder="PPE">
+    
+    <input type="number" id="num37_2" oninput="calculate()" name="6648_hygiene" style=" color: red;"  required placeholder="Hygiene">
+    
+    <input type="number" id="num37_3" oninput="calculate()" name="6648_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+    
+    <input type="number" id="num37_4" oninput="calculate()" name="6648_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+    
+    <input type="number" id="num37_5" oninput="calculate()" name="6648_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+    
+    <input type="number" id="result37" name="6648_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+    
+    </div>
+    <!---------------->
+    
+    <br>
+    
+    <div>
+    <input type="text" name="" id=""  value="NWEKE COSMAS UCHENNA"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+    <input type="number" id="num38_1" oninput="calculate()" name="7216_PPE" style=" color: red;"  required placeholder="PPE">
+    
+    <input type="number" id="num38_2" oninput="calculate()" name="7216_hygiene" style=" color: red;"  required placeholder="Hygiene">
+    
+    <input type="number" id="num38_3" oninput="calculate()" name="7216_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+    
+    <input type="number" id="num38_4" oninput="calculate()" name="7216_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+    
+    <input type="number" id="num38_5" oninput="calculate()" name="7216_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+    
+    <input type="number" id="result38" name="7216_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+    
+    </div>
+    <!---------------->
+    <br>
+    
+    
+    <div>
+    <input type="text" name="" id=""  value="ANIGWE UCHECHUKWU"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+    <input type="number" id="num39_1" oninput="calculate()" name="7217_PPE" style=" color: red;"  required placeholder="PPE">
+    
+    <input type="number" id="num39_2" oninput="calculate()" name="7217_hygiene" style=" color: red;"  required placeholder="Hygiene">
+    
+    <input type="number" id="num39_3" oninput="calculate()" name="7217_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+    
+    <input type="number" id="num39_4" oninput="calculate()" name="7217_safety_policy" style=" color: red;"  required placeholder="Safety Policy">
+    
+    <input type="number" id="num39_5" oninput="calculate()" name="7217_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+    
+    <input type="number" id="result39" name="7217_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+    
+    </div>
+    <!---------------->
+    <br>
+    
+    <div>
+    <input type="text" name="" id=""  value="CHUKWUDUM ORAKWUE"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+    <input type="number" id="num40_1" oninput="calculate()" name="7284_PPE" style=" color: red;"  required placeholder="PPE">
+    
+    <input type="number" id="num40_2" oninput="calculate()" name="7284_hygiene" style=" color: red;"  required placeholder="Hygiene">
+    
+    <input type="number" id="num40_3" oninput="calculate()" name="7284_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+    
+    <input type="number" id="num40_4" oninput="calculate()" name="7284_safety_policy" style=" color: red;"  required  placeholder="Safety Policy" >
+    
+    <input type="number" id="num40_5" oninput="calculate()" name="7284_corrective_action" style=" color: red;"  required   placeholder="Corrective Action">
+    
+    <input type="number" id="result40" name="7284_average_score_hse" style=" color: red;"  readonly  placeholder="Average Score">
+    
+    </div>
+    <!---------------->
+    <br>
+    
+    <div>
+    <input type="text" name="" id=""  value="OLOWOSAYO BUKOLA"  disabled style="font-weight: bold; background-color: #293241; color: white;">
+    <input type="number" id="num41_1" oninput="calculate()" name="7311_PPE" style=" color: red;"  required placeholder="PPE">
+    
+    <input type="number" id="num41_2" oninput="calculate()" name="7311_hygiene" style=" color: red;"  required placeholder="Hygiene">
+    
+    <input type="number" id="num41_3" oninput="calculate()" name="7311_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+    
+    <input type="number" id="num41_4" oninput="calculate()" name="7311_safety_policy" style=" color: red;"  required  placeholder="Safety Policy" >
+    
+    <input type="number" id="num41_5" oninput="calculate()" name="7311_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+    
+    <input type="number" id="result41" name="7311_average_score_hse" style=" color: red;"  readonly  placeholder="Average Score">
+    
+    </div>
+    <!---------------->
+    <br>
+
+
+    <div>
+      <input type="text" id=""  value="OGUNDIRAN VICTOR OLUWATOSIN" name="" disabled style="font-weight: bold; background-color: #293241; color: white;">
+        <input type="number" id="num42_1" oninput="calculate()" name="8356_PPE" style=" color: red;" required placeholder="PPE">
+      
+        <input type="number" id="num42_2" oninput="calculate()" name="8356_hygiene" style=" color: red;"  required placeholder="Hygiene">
+      
+        <input type="number" id="num42_3" oninput="calculate()" name="8356_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+      
+        <input type="number" id="num42_4" oninput="calculate()" name="8356_safety_policy" style=" color: red;"  required placeholder="Safety Policy" >
+      
+        <input type="number" id="num42_5" oninput="calculate()" name="8356_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+      
+        <input type="number" id="result42" name="8356_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+      
+      </div>
+      <!---------------->
+      
+      <br>
+
+      <div>
+        <input type="text" id=""  value="NTADA FIDELIS CH" name="" disabled style="font-weight: bold; background-color: #293241; color: white;">
+          <input type="number" id="num43_1" oninput="calculate()" name="5578_PPE" style=" color: red;" required placeholder="PPE">
+        
+          <input type="number" id="num43_2" oninput="calculate()" name="5578_hygiene" style=" color: red;"  required placeholder="Hygiene">
+        
+          <input type="number" id="num43_3" oninput="calculate()" name="5578_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+        
+          <input type="number" id="num43_4" oninput="calculate()" name="5578_safety_policy" style=" color: red;"  required placeholder="Corrective Action">
+        
+          <input type="number" id="num43_5" oninput="calculate()" name="5578_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+        
+          <input type="number" id="result43" name="5578_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+        
+        </div>
+        <!---------------->
+        
+        <br>
+
+
+        <div>
+          <input type="text" id=""  value="ANOFI BASHIRU AN" name="" disabled style="font-weight: bold; background-color: #293241; color: white;">
+            <input type="number" id="num44_1" oninput="calculate()" name="6144_PPE" style=" color: red;" required placeholder="PPE">
+          
+            <input type="number" id="num44_2" oninput="calculate()" name="6144_hygiene" style=" color: red;"  required placeholder="Hygiene">
+          
+            <input type="number" id="num44_3" oninput="calculate()" name="6144_safety_meeting" style=" color: red;"  required placeholder="Safety Meeting">
+          
+            <input type="number" id="num44_4" oninput="calculate()" name="6144_safety_policy" style=" color: red;"  required placeholder="Corrective Action">
+          
+            <input type="number" id="num44_5" oninput="calculate()" name="6144_corrective_action" style=" color: red;"  required placeholder="Corrective Action">
+          
+            <input type="number" id="result44" name="6144_average_score_hse" style=" color: red;"  readonly placeholder="Average Score">
+          
+          </div>
+          <!---------------->
+          
+          <br>
+
+  </div>
+
+</form>
+
+</section>
+
+  </main>
+
+  <div class="clear"></div>
+  <div >
+    <button  class="button1" type="submit" onclick='SubForm()'>Submit</button>
+  
+  </div>
+
+
+
+  <div class="clear"></div>
+  <footer>  
+       <hr>
+<div class="copyright1">
+ <small>copyright&copy;2023Mikano</small> 
+</div>
+
+</footer>
+  
+</body>
+<!---Script for date-->
+<script>
+  // Get the current date and format it as YYYY-MM-DD
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+  const currentDate = `${year}-${month}-${day}`;
+
+  // Set the min attribute of the date input to prevent backdates
+  const dateInput = document.getElementById('dateInput');
+  dateInput.min = currentDate;
+</script>
+
+</html>
