@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<title>HRP</title>
+<link rel="stylesheet" href="./css/main.css"/>
+<link rel="shortcut icon" href="./icons/mikano_logo.png">
+</head>
+
+<style>
+
+/*@media queries for the page */
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) and (max-width: 599px) {
+      html {
+  height: 100%;
+background: #b0c3f6;
+}
+
+
+
+ .welcomepagelogo{
+margin-top: 100px;
+text-align: center;
+}
+
+.supervisor1 {
+text-align: center;
+font-family: tahoma;
+padding: 10px 10px 10px 10px;
+border: 5px ridge #777776;
+font-weight: bold;
+background-color: white;
+}
+
+.supervisor1:hover{
+  border-color: #002ead;
+  background-color: rgb(0, 187, 255, 10%);
+  color: red;
+}
+
+.supervisor2:hover{
+  border-color: #002ead;
+  background-color: rgb(0, 187, 255, 10%);
+  color: red;
+}
+
+.supervisor3:hover{
+border-color: #002ead;
+  background-color: rgb(0, 187, 255, 10%);
+  color: red;
+}
+
+.supervisor2 {
+text-align: center;
+font-family: tahoma;
+padding: 10px 10px 10px 10px;
+border: 5px ridge #777776;
+font-weight: bold;
+background-color: white;
+}
+
+.supervisor3{
+text-align: center;
+font-family: tahoma;
+padding: 10px 10px 10px 10px;
+border: 5px ridge #777776;
+font-weight: bold;
+background-color: white;
+}
+
+.clear2{
+  clear: both;
+}
+
+.supervisor1,.supervisor2,.supervisor3{
+width: 50%;
+margin-left: 90px;
+margin-bottom: 20px;
+}
+
+.hidden{
+  display : none;
+  }
+
+footer{
+  padding-top: 400px;
+}
+
+/*this code is used to rule the page. */
+hr{
+    margin-top:200px;
+}
+
+/*this code is used for the app copyright */
+.copyright1{
+    font-family: tahoma;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+
+}
+
+
+.mySlides2 {
+  display:none;
+
+}
+
+.display{
+display: none;
+}
+
+
+
+.gbutton:hover{
+  background-color: hotpink;
+  color: white;
+}
+
+.gbutton{
+  border-style: outset;
+   border-radius: 5px; 
+   font-size: 18px;
+    background-color:#002ead;
+    color: #fff;
+}
+
+.disDept{
+  max-width: 100%;
+  background-color: #87cfeb67;
+  margin-left: 20px;
+border: 2px ridge;
+box-shadow: 0px 0px 5px 2px black;
+background: #f1ecd7;
+height: 700px;
+margin-right: 20px;
+
+}
+
+
+.first{
+padding-left: 10px;
+  margin-top: 50px;
+  float: left;
+
+}
+
+main{
+  margin-top: 80px;
+
+}
+
+#allow01{
+  margin-top: 20px;
+}
+
+}
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) and (max-width: 699px) {
+
+
+}
+
+
+/* Medium devices (landscape tablets, 700px and up) */
+@media only screen and (min-width: 700px) and (max-width: 899px) {
+
+
+
+
+  } 
+
+  
+  /* Large devices (laptops/desktops, 900px and up) */
+  @media only screen and (min-width: 900px) and (max-width: 1199px) {
+
+  } 
+  
+  
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) { 
+ html{
+  background-image: url(background_for_HRP.jpg);
+  min-height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+ }
+
+
+
+ .welcomepagelogo{
+  padding-top:50px;
+text-align: center;
+}
+
+.supervisor1 {
+float: left;
+width: 20%;
+margin-left: 200px;
+margin-top:50px;
+margin-bottom: 50px;
+text-align: center;
+font-family: tahoma;
+padding: 10px 10px 10px 10px;
+border: 5px ridge #777776;
+font-weight: bold;
+background-color: white;
+}
+
+.supervisor1:hover{
+  border-color: #002ead;
+  background-color: rgb(0, 187, 255, 10%);
+  color: red;
+}
+
+.supervisor2:hover{
+  border-color: #002ead;
+  background-color: rgb(0, 187, 255, 10%);
+  color: red;
+}
+
+.supervisor3:hover{
+border-color: #002ead;
+  background-color: rgb(0, 187, 255, 10%);
+  color: red;
+}
+
+.supervisor2 {
+float: left;
+width: 20%;
+margin-left: 50px;
+margin-top:50px;
+margin-bottom: 50px;
+text-align: center;
+font-family: tahoma;
+padding: 10px 10px 10px 10px;
+border: 5px ridge #777776;
+font-weight: bold;
+background-color: white;
+}
+
+.supervisor3{
+float: left;
+width: 20%;
+margin-left: 50px;
+margin-top:50px;
+margin-bottom: 50px;
+text-align: center;
+font-family: tahoma;
+padding: 10px 10px 10px 10px;
+border: 5px ridge #777776;
+font-weight: bold;
+background-color: white;
+}
+
+.clear{
+  clear: both;
+}
+
+
+.hidden{
+  display : none;
+  }
+
+footer{
+  padding-top: 400px;
+}
+
+/*this code is used to rule the page. */
+hr{
+    margin-top:200px;
+}
+
+/*this code is used for the app copyright */
+.copyright1{
+    font-family: tahoma;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+
+}
+
+
+.mySlides {
+  display:none;
+
+}
+
+
+
+.mySlides2{
+  display:none;
+
+}
+
+.display{
+  
+height: 80px;
+}
+
+.container1{
+  margin-top: 110px;
+}
+
+.gbutton:hover{
+  background-color: #002ead;
+  color: white;
+}
+
+.gbutton{
+  border-style: outset;
+   border-radius: 5px; 
+   font-size: 18px;
+    background-color:#0a0a23;
+    color: #fff;
+}
+.disDept{
+  max-width: 100%;
+  background-color: #87cfeb67;
+border-radius: 7px;
+box-shadow: 0px 0px 5px 2px black;
+padding-bottom: 20px;
+height: 200px;
+
+}
+
+.container2{
+margin-left: 40px;
+}
+
+
+.first{
+padding-left: 10px;
+  margin-top: 50px;
+  float: left;
+
+}
+
+main{
+  margin-top: 50px;
+
+}
+
+
+
+  }
+
+
+
+
+    </style>
+
+<body class="body1"> 
+
+
+<nav>
+
+    <div class="display" >
+      <img class="mySlides" src="./images/dfm.png" style="max-width: 100%; margin-left: 50px;">
+      <img class="mySlides" src="./images/changan.png" style="max-width: 100%; margin-left: 700px;">
+      <img class="mySlides" src="./images/cars.png" style="max-width: 100%; margin-left: 320px;">
+    </div>
+</nav>
+
+
+
+  
+
+<div class="container1">
+<div class="clear"></div>
+      <header>
+        <div class="welcomepagelogo">
+          <img src="./images/welcomepage_logo.png"  alt="mikano_logo"style="  max-width: 100%; height: auto;"/>
+      </div>
+    </header>
+          
+
+  
+    <main >
+       
+          <div class="clear"></div> 
+     
+
+            <div class="supervisor1">
+        
+        <p style="width:auto; font-size:x-large;" onclick="showGood01()" id="">Admin01</p>
+        <input type="password" name="password11" size="15" id="password11" class="hidden" onkeyup="activateBtn01()" style="margin-top: 30px; margin-left: 20px;" disabled/>
+        <a href="information_page.html" target="_blank" > <button  id='allow01'  disabled name="allow01" value='Allow Access' class="hidden">Login </button></a>
+            </div>
+
+          <div class="clear2"></div>
+              <div class="supervisor2" >
+              <p style="width:auto; font-size:x-large;" onclick="showGood088()" id=""  disabled>Admin02</p>
+              <input type="password" name="password088" size="15" id="password088" class="hidden" onkeyup="activateBtn088()" style="margin-top: 30px; margin-left: 20px;" disabled/>
+              <a href="information_page.html" target="_blank" ><button  id='allow088'  disabled name="allow088" value='Allow Access' class="hidden" type="submit">Login </button></a>
+              </div>
+              <div class="clear2"></div>
+
+              <div class="supervisor3">
+             <p style="width:auto; font-size:x-large;" onclick="showGood077()" id="">Supervisor</p>   
+  </div>
+             <div class="clear2"></div>
+             <div class="hidden" id="showDept">
+              <div class="clear"></div>
+              <div class="disDept">
+                <div class="container2">
+               <p class="first">
+           <button class="gbutton" type="button" onclick="showGood13()" id="" style="font-weight: bold; margin-bottom: 15px;" disabled>Logistics</button>
+           <input type="password" name="password13" size="15" id="password13" class="hidden" onkeyup="activateBtn13()" />
+           <a href="./supervisors/logistics.html" ><button  class="accessbutton"   id='allow13'  disabled name="allow13" value='Allow Access'>Login </button></a>
+               </p>
+
+               <p class="first">
+                <button class="gbutton" type="button" onclick="showGood14()" id="" style="font-weight: bold; margin-bottom: 15px;" >Production</button>
+                <input type="password" name="password14" size="15" id="password14" class="hidden" onkeyup="activateBtn14()" />
+                <a href="./supervisors/production.html" ><button  class="accessbutton"   id='allow14'  disabled name="allow14" value='Allow Access'>Login </button></a>
+                    </p>
+
+                    <p class="first">
+                      <button class="gbutton" type="button" onclick="showGood15()" id="" style="font-weight: bold; margin-bottom: 15px;" disabled>Quality Control</button>
+                      <input type="password" name="password15" size="15" id="password15" class="hidden" onkeyup="activateBtn15()" />
+                      <a href="./supervisors/quality_control.html" ><button  class="accessbutton"   id='allow15'  disabled name="allow15" value='Allow Access'>Login </button></a>
+                          </p>
+
+                          <p class="first">
+                            <button class="gbutton" type="button" onclick="showGood16()" id="" style="font-weight: bold; margin-bottom: 15px;" disabled>Quality Assurance</button>
+                            <input type="password" name="password16" size="15" id="password16" class="hidden" onkeyup="activateBtn16()" />
+                            <a href="./supervisors/quality_assurance.html" ><button  class="accessbutton"   id='allow16'  disabled name="allow16" value='Allow Access'>Login </button></a>
+                                </p>
+
+                                <p class="first">
+                                  <button class="gbutton" type="button" onclick="showGood17()" id="" style="font-weight: bold; margin-bottom: 15px;" disabled>Maintenance</button>
+                                  <input type="password" name="password17" size="15" id="password17" class="hidden" onkeyup="activateBtn17()" />
+                                  <a href="./supervisors/maintenance.html" ><button  class="accessbutton"   id='allow17'  disabled name="allow17" value='Allow Access'>Login </button></a>
+                                      </p>
+
+                                      <p class="first">
+                                        <button class="gbutton" type="button" onclick="showGood18()" id="" style="font-weight: bold; margin-bottom: 15px;" disabled>HSE</button>
+                                        <input type="password" name="password18" size="15" id="password18" class="hidden" onkeyup="activateBtn18()" />
+                                        <a href="./supervisors/hse.html" ><button  class="accessbutton"   id='allow18'  disabled name="allow18" value='Allow Access'>Login</button></a>
+                                            </p>
+
+                                            <p class="first">
+                                              <button class="gbutton" type="button" onclick="showGood19()" id="" style="font-weight: bold; margin-bottom: 15px;" disabled>Shared Service</button>
+                                              <input type="password" name="password19" size="15" id="password19" class="hidden" onkeyup="activateBtn19()" />
+                                              <a href="./supervisors/shared_service.html" ><button  class="accessbutton"   id='allow19'  disabled name="allow19" value='Allow Access'>Login</button></a>
+                                                  </p>
+
+                                                  <p class="first">
+                                                    <button class="gbutton" type="button" onclick="showGood20()" id="" style="font-weight: bold; margin-bottom: 15px;" disabled>HR</button>
+                                                    <input type="password" name="password20" size="15" id="password20" class="hidden" onkeyup="activateBtn20()" />
+                                                    <a href="./supervisors/hr.html" target="_blank"><button  class="accessbutton"   id='allow20'  disabled name="allow20" value='Allow Access'>Login</button></a>
+                                                        </p>
+
+                                                        <p class="first">
+                                                          <button class="gbutton" type="button" onclick="showGood21()" id="" style="font-weight: bold; margin-bottom: 15px;" disabled>PM</button>
+                                                          <input type="password" name="password21" size="15" id="password21" class="hidden" onkeyup="activateBtn21()" />
+                                                          <a href="./supervisors/pm.html" ><button  class="accessbutton"   id='allow21'  disabled name="allow21" value='Allow Access'>Login</button></a>
+                                                              </p>         
+                                                </div> 
+                                                </div> 
+                                                
+                                                <div class="clear"></div>
+                          
+             </div>
+
+
+            </div>
+            <div class="clear2"></div>
+
+
+                <div class="clear"></div>
+                
+                 <hr>
+        <div class="copyright1">
+           <small>copyright&copy;2023Mikano</small> 
+        </div>
+
+  </main>
+
+</div>
+
+
+
+ 
+  
+  
+  <script>
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+
+
+
+
+
+         //this is to show the password input for admin01
+function showGood01() {
+        var div1 = document.getElementById("password11");
+        var div2 = document.getElementById("allow01");
+
+      div1.classList.toggle('hidden');
+      div2.classList.toggle('hidden');
+
+      }
+
+
+      function activateBtn01() {
+        pass = document.getElementById('password11').value;
+        console.log(pass);
+        document.getElementById('allow01').disabled = pass !== 'Tadmin'; 
+        document.getElementById('allow01').style.color = "white";
+        document.getElementById('allow01').style.background = "green";
+        }
+
+
+//this is to show the password input for admin02
+function showGood088() {
+        var div1 = document.getElementById("password088");
+        var div2 = document.getElementById("allow088");
+
+      div1.classList.toggle('hidden');
+      div2.classList.toggle('hidden');
+
+      }
+
+
+      function activateBtn088() {
+        pass = document.getElementById('password088').value;
+        console.log(pass);
+        document.getElementById('allow088').disabled = pass !== 'manager'; 
+        document.getElementById('allow088').style.color = "white";
+        document.getElementById('allow088').style.background = "green";
+        }
+  
+
+        function showGood077() {
+        var div1 = document.getElementById("showDept");
+
+
+      div1.classList.toggle('hidden');
+
+
+      }
+
+
+//this is to show the password input for logistics
+function showGood13() {
+        var div1 = document.getElementById("password13");
+
+
+      div1.classList.toggle('hidden');
+
+
+      }
+
+
+      function activateBtn13() {
+        pass = document.getElementById('password13').value;
+        console.log(pass);
+        document.getElementById('allow13').disabled = pass !== 'Ahs40'; 
+        document.getElementById('allow13').style.color = "white";
+        document.getElementById('allow13').style.background = "green";
+        }
+
+
+//this is to show the password input for production
+function showGood14() {
+        var div1 = document.getElementById("password14");
+
+
+      div1.classList.toggle('hidden');
+
+
+      }
+
+
+      function activateBtn14() {
+        pass = document.getElementById('password14').value;
+        console.log(pass);
+        document.getElementById('allow14').disabled = pass !== 'Pro19'; 
+        document.getElementById('allow14').style.color = "white";
+        document.getElementById('allow14').style.background = "green";
+        }
+  
+
+//this is to show the password input for quality control
+function showGood15() {
+        var div1 = document.getElementById("password15");
+
+
+      div1.classList.toggle('hidden');
+
+
+      }
+
+
+      function activateBtn15() {
+        pass = document.getElementById('password15').value;
+        console.log(pass);
+        document.getElementById('allow15').disabled = pass !== 'Qc34'; 
+        document.getElementById('allow15').style.color = "white";
+        document.getElementById('allow15').style.background = "green";
+        }
+  
+
+
+//this is to show the password input for quality assurance
+function showGood16() {
+        var div1 = document.getElementById("password16");
+
+
+      div1.classList.toggle('hidden');
+
+
+      }
+
+
+      function activateBtn16() {
+        pass = document.getElementById('password16').value;
+        console.log(pass);
+        document.getElementById('allow16').disabled = pass !== 'Qa90'; 
+        document.getElementById('allow16').style.color = "white";
+        document.getElementById('allow16').style.background = "green";
+        }
+  
+
+//this is to show the password input for maintenance
+function showGood17() {
+        var div1 = document.getElementById("password17");
+
+
+      div1.classList.toggle('hidden');
+
+
+      }
+
+
+      function activateBtn17() {
+        pass = document.getElementById('password17').value;
+        console.log(pass);
+        document.getElementById('allow17').disabled = pass !== '@mtn'; 
+        document.getElementById('allow17').style.color = "white";
+        document.getElementById('allow17').style.background = "green";
+        }
+
+
+  //this is to show the password input for hse
+function showGood18() {
+        var div1 = document.getElementById("password18");
+
+
+      div1.classList.toggle('hidden');
+
+
+      }
+
+
+      function activateBtn18() {
+        pass = document.getElementById('password18').value;
+        console.log(pass);
+        document.getElementById('allow18').disabled = pass !== '@save'; 
+        document.getElementById('allow18').style.color = "white";
+        document.getElementById('allow18').style.background = "green";
+        }      
+
+        
+  //this is to show the password input for shared service
+  function showGood19() {
+        var div1 = document.getElementById("password19");
+
+
+      div1.classList.toggle('hidden');
+
+
+      }
+
+
+      function activateBtn19() {
+        pass = document.getElementById('password19').value;
+        console.log(pass);
+        document.getElementById('allow19').disabled = pass !== '@show'; 
+        document.getElementById('allow19').style.color = "white";
+        document.getElementById('allow19').style.background = "green";
+        }      
+
+
+
+   //this is to show the password input for hr
+  function showGood20() {
+        var div1 = document.getElementById("password20");
+
+
+      div1.classList.toggle('hidden');
+
+
+      }
+
+
+      function activateBtn20() {
+        pass = document.getElementById('password20').value;
+        console.log(pass);
+        document.getElementById('allow20').disabled = pass !== 'Tadmin'; 
+        document.getElementById('allow20').style.color = "white";
+        document.getElementById('allow20').style.background = "green";
+        } 
+
+
+        
+     //this is to show the password input for pm
+     function showGood21() {
+        var div1 = document.getElementById("password21");
+
+
+      div1.classList.toggle('hidden');
+
+
+      }
+
+
+      function activateBtn21() {
+        pass = document.getElementById('password21').value;
+        console.log(pass);
+        document.getElementById('allow21').disabled = pass !== 'manager'; 
+        document.getElementById('allow21').style.color = "white";
+        document.getElementById('allow21').style.background = "green";
+        } 
+        
+  </script>
+  </body>
+</html>     

@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRPS</title>
+  <link rel="stylesheet" href="./css/main.css"/>
+  <link rel="shortcut icon" href="./icons/mikano_logo.png">
+</head>
+
+<style>
+/*@media queries for the page */
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) and (max-width: 599px) {
+      html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #00bfff5e;
+}
+
+
+.back{
+    width: 100%;
+        background: #333;
+        font: 20px;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        color: #fff;
+      }
+
+#main-holder {
+  width: 98%;
+
+
+  background-color: #f1edbb5e;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 2px black;
+padding-bottom: 20px;
+}
+
+.welcomepage_logo{
+    margin-top: 10px;
+margin-left: 20px;
+margin-bottom: 50px;
+}
+
+.first{
+
+  margin-top: 50px;
+  float: left;
+
+}
+
+
+
+
+.container{
+  margin-top: 20px;
+margin-left: 50px;
+}
+
+.title{
+  text-align: center;
+  font-size: 25px;
+}
+
+hr{
+  margin-top: 50px;
+}
+/*this code is used for the app copyright */
+.copyright1{
+    font-family: tahoma;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+
+}
+
+.hidden{
+  display : none;
+}
+
+.button1{
+    margin-top:50px;
+    font-size: 20px; 
+    padding:50px; 
+    font-weight:bold;
+  }
+
+  .button1:hover {
+    background-color: yellowgreen;
+    color: white;
+  }
+
+  input{
+    background-color: #00bfff10;
+
+  }
+
+  .super{
+    font-weight: bold;
+    font-size: 5vh;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+.clear{
+  clear: both;
+}
+
+input{
+border: #21211e5e 5px ridge;
+font-weight: bold;
+}
+hr{
+  border: black 1px ridge;
+}
+
+}
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) and (max-width: 699px) {
+    .back{
+    width: 100%;
+        background: #333;
+        font: 20px;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        color: #fff;
+      }
+
+}
+
+
+/* Medium devices (landscape tablets, 700px and up) */
+@media only screen and (min-width: 700px) and (max-width: 899px) {
+
+
+
+
+  } 
+
+  
+  /* Large devices (laptops/desktops, 900px and up) */
+  @media only screen and (min-width: 900px) and (max-width: 1199px) {
+    .back{
+  display: none;
+}
+  } 
+  
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) { 
+
+      html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #00bfff5e;
+}
+
+#main-holder {
+  width: 98%;
+
+
+  background-color: #f1edbb5e;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 2px black;
+padding-bottom: 20px;
+}
+
+.welcomepage_logo{
+    margin-top: 10px;
+margin-left: 20px;
+margin-bottom: 50px;
+}
+
+.first{
+
+  margin-top: 50px;
+  float: left;
+
+}
+
+
+
+
+.container{
+margin-left: 10px;
+}
+
+.title{
+  text-align: center;
+  font-size: 25px;
+}
+
+hr{
+  margin-top: 50px;
+}
+/*this code is used for the app copyright */
+.copyright1{
+    font-family: tahoma;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+
+}
+
+.hidden{
+  display : none;
+}
+
+.button1{
+    margin-top:50px;
+    font-size: 20px; 
+    padding:50px; 
+    font-weight:bold;
+  }
+
+  .button1:hover {
+    background-color: yellowgreen;
+    color: white;
+  }
+
+  input{
+    background-color: #00bfff10;
+
+  }
+
+  .super{
+    font-weight: bold;
+    font-size: 7vh;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+.clear{
+  clear: both;
+}
+
+input{
+border: #21211e5e 5px ridge;
+font-weight: bold;
+}
+hr{
+  border: black 2px ridge;
+}
+
+.back{
+  display: none;
+}
+  }
+
+
+
+</style>
+
+
+<!------------------script for database-->
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+<script>
+  function SubForm (){
+  var inputs = document.getElementsByTagName('input');
+  var requiredFieldsFilled = true;
+
+  // Loop through each input element
+  for (var i = 0; i < inputs.length; i++) {
+    // Check if the input element is required and has no value
+    if (inputs[i].hasAttribute('required') && inputs[i].value.trim() === '') {
+      requiredFieldsFilled = false;
+      break; // Exit the loop, as we've found an empty required field
+    }
+  }
+
+  if (!requiredFieldsFilled) {
+    alert('Please fill in all required fields.');
+    return; // Prevent form submission
+  }
+    
+//Json libray code link for data storage
+      $.ajax({
+          url:"https://api.apispreadsheets.com/data/hpb52iGeMW2hfaTr/",
+          type:"post",
+          data:$("#myForm").serializeArray(),
+          success: function(){
+              alert("successful!")
+          },
+          error: function(){
+              alert("No Network Connection:(error")
+          }
+      });
+  }
+  </script>
+
+
+<!---------------------------------script arithmetic-->
+<script>
+  function calculate() {
+    for (var i = 1; i <= 100; i++) {
+      var sum = 0;
+
+      for (var j = 1; j <= 3; j++) {
+        var inputId = 'num' + i + '_' + j;
+        var input = document.getElementById(inputId);
+        var number = parseFloat(input.value);
+
+
+
+        sum += number;
+      }
+
+      var resultId = 'result' + i;
+      document.getElementById(resultId).value = sum;
+    }
+  }
+</script>
+<body>
+  <div class="back">
+    <a href="welcome_page.html"><---Previous Page</a> 
+   </div>
+
+  <main id="main-holder">
+  
+    <div><img src="./images/welcomepage_logo.png" alt="welcomepage_logo" class="welcomepage_logo" width="20%"></div>
+<header style="font-weight: bold;" class="title">PERFORMANCE APPRAISAL MONTHLY</header>
+<form  id="myForm">
+<div class="container">
+<section>
+ <header><input type="date" name="date" id="dateInput" min="" style="font-weight: bold;" required></header>
+<nav>
+
+  <div class="first">
+<button style="font-weight: bold; background-color:#293241; color: white;">Logistics</button>
+    <p><input type="text" name="" value="NTADA_FIDELIS_5578" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+    <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+
+    <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num1_1" oninput="calculate()"  style="width:30%; padding-left:1px;" name="5578_supervisor" required><br>
+    <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num1_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="5578_hr" required><br>
+    <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num1_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="5578_hse" required><br>
+    <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result1" name="5578_grandtotal" readonly>
+  </div>
+
+  <div class="first">
+    <button style="font-weight: bold; background-color:#293241; color: white;" >Logistics</button>
+        <p><input type="text" name="" value="AKALA_AYODELE_6129" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+        <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+    
+        <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num2_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6129_supervisor" required><br>
+        <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num2_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6129_hr" required><br>
+        <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num2_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6129_hse" required><br>
+        <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result2" name="6129_grandtotal" readonly>
+      </div>
+
+      <div class="first">
+        <button style="font-weight: bold; background-color:#293241; color: white;" >Logistics</button>
+            <p><input type="text" name="" value="ADEDOKUN_SEYI_6157" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+            <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+        
+            <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num3_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6157_supervisor" required><br>
+            <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num3_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6157_hr" required><br>
+            <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num3_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6157_hse" required><br>
+            <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result3" name="6157_grandtotal" readonly>
+          </div>
+
+
+          <div class="first">
+            <button style="font-weight: bold; background-color:#293241; color: white;">Logistics</button>
+                <p><input type="text" name="" value="ADEYEMO_ABIODUN_6209" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+            
+                <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num4_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6209_supervisor" required><br>
+                <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num4_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6209_hr" required><br>
+                <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num4_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6209_hse" required><br>
+                <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result4" name="6209_grandtotal" readonly>
+              </div>
+            
+            <!---SECOND LINE-->
+              <div class="first">
+                <button style="font-weight: bold; background-color:#293241; color: white;" >Logistics</button>
+                    <p><input type="text" name="" value="OKOLIE_CHIDI_6215" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                    <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                
+                    <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num5_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6215_supervisor" required><br>
+                    <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num5_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6215_hr" required><br>
+                    <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num5_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6215_hse" required><br>
+                    <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result5" name="6215_grandtotal" readonly>
+                  </div>
+            
+                  <div class="first">
+                    <button style="font-weight: bold; background-color:#293241; color: white;" >Logistics</button>
+                        <p><input type="text" name="" value="ATOYEBI_SOLOMON_6243" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                        <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                    
+                        <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num6_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6243_supervisor" required><br>
+                        <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num6_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6243_hr" required><br>
+                        <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num6_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6243_hse" required><br>
+                        <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result6" name="6243_grandtotal" readonly>
+                      </div>   
+                      
+<!---THIRD LINE-->                      
+<div class="first">
+  <button style="font-weight: bold; background-color:#293241; color: white;">Logistics</button>
+      <p><input type="text" name="" value="LAWAL_MUFTAU_7269" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+      <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+  
+      <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num7_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7269_supervisor"  required><br>
+      <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num7_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7269_hr" required><br>
+      <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num7_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7269_hse" required><br>
+      <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result7" name="7269_grandtotal" readonly>
+    </div>
+  
+    <div class="first">
+      <button style="font-weight: bold; background-color:#293241; color: white;" >Store</button>
+          <p><input type="text" name="" value="IGE_OLURINADE_7256" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+          <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+      
+          <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num8_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7256_supervisor" required><br>
+          <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num8_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7256_hr" required><br>
+          <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num8_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7256_hse" required><br>
+          <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result8" name="7256_grandtotal" readonly>
+        </div>
+
+        <div class="first">
+          <button style="font-weight: bold; background-color:#293241; color: white;" >Store</button>
+              <p><input type="text" name="" value="IROEGBULAM_AMARACHI_7627" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+              <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+          
+              <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num9_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7627_supervisor" required><br>
+              <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num9_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7627_hr" required><br>
+              <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num9_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7627_hse" required><br>
+              <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result9" name="7627_grandtotal" readonly>
+            </div>
+
+            <div class="first">
+              <button style="font-weight: bold; background-color:#293241; color: white;" >Store</button>
+                  <p><input type="text" name="" value="OKUNADE_OLADEPO_8260" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                  <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+              
+                  <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num10_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="8260_supervisor" required><br>
+                  <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num10_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="8260_hr" required><br>
+                  <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num10_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="8260_hse" required><br>
+                  <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result10" name="8260_grandtotal" readonly>
+                </div>  
+    <div class="first">
+      <button style="font-weight: bold; background-color:#293241; color: white;" >Production</button>
+          <p><input type="text" name="" value="ANOFI_BASHIRU_6144" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+          <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+      
+          <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num11_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6144_supervisor" required><br>
+          <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num11_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6144_hr" required><br>
+          <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num11_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6144_hse" required><br>
+          <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result11" name="6144_grandtotal" readonly>
+        </div>
+  
+        <div class="first">
+          <button style="font-weight: bold; background-color:#293241; color: white;" >Production</button>
+              <p><input type="text" name="" value="ASUELIMEHEN_GODR_6158" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+              <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+          
+              <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num12_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6158_supervisor" required><br>
+              <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num12_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6158_hr" required><br>
+              <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num12_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6158_hse" required><br>
+              <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result12" name="6158_grandtotal" readonly>
+            </div>
+            
+<!--------->
+
+
+<div class="first">
+  <button style="font-weight: bold; background-color:#293241; color: white;" >Production</button>
+      <p><input type="text" name="" value="ISHOLA_RASHEED_6162" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+      <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+  
+      <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num13_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6162_supervisor" required><br>
+      <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num13_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6162_hr" required><br>
+      <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num13_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6162_hse" required><br>
+      <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result13" name="6162_grandtotal" readonly>
+    </div>
+  
+  
+    <div class="first">
+      <button style="font-weight: bold; background-color:#293241; color: white;" >Production</button>
+          <p><input type="text" name="" value="AKANMU_IDOWU_6170" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+          <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+      
+          <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num14_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6170_supervisor" required><br>
+          <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num14_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6170_hr" required><br>
+          <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num14_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6170_hse" required><br>
+          <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result14" name="6170_grandtotal" readonly>
+        </div>
+  
+        <div class="first">
+          <button style="font-weight: bold; background-color:#293241; color: white;" >Production</button>
+              <p><input type="text" name="" value="OYEDOKUN_MATTHEW_6263" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+              <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+          
+              <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num15_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6263_supervisor" required><br>
+              <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num15_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6263_hr" required><br>
+              <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num15_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6263_hse" required><br>
+              <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result15" name="6263_grandtotal" readonly>
+            </div>
+
+
+<!--------->
+
+
+<div class="first">
+  <button style="font-weight: bold; background-color:#293241; color: white;" >Production</button>
+      <p><input type="text" name="" value="AYATU_SALIHU_6447" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+      <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+  
+      <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num16_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6447_supervisor" required><br>
+      <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num16_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6447_hr" required><br>
+      <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num16_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6447_hse" required><br>
+      <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result16" name="6447_grandtotal" readonly>
+    </div>
+  
+  
+    <div class="first">
+      <button style="font-weight: bold; background-color:#293241; color: white;" >Production</button>
+          <p><input type="text" name="" value="OGUNYEMI_ADENIYI_6932" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+          <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+      
+          <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num17_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6932_supervisor" required><br>
+          <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num17_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6932_hr" required><br>
+          <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num17_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6932_hse" required><br>
+          <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result17" name="6932_grandtotal" readonly>
+        </div>
+  
+        <div class="first">
+          <button style="font-weight: bold; background-color:#293241; color: white;" >Production</button>
+              <p><input type="text" name="" value="ADENIYI_OMOSOLA_7223" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+              <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+          
+              <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num18_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7223_supervisor" required><br>
+              <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num18_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7223_hr" required><br>
+              <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num18_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7223_hse" required><br>
+              <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result18" name="7223_grandtotal" readonly>
+            </div>
+
+            <!--------->
+
+
+<div class="first">
+  <button style="font-weight: bold; background-color:#293241; color: white;" >Production</button>
+      <p><input type="text" name="" value="ARISONYIN_TAIWO_7273" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+      <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+  
+      <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num19_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7273_supervisor" required><br>
+      <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num19_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7273_hr" required><br>
+      <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num19_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7273_hse" required><br>
+      <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result19" name="7273_grandtotal" readonly>
+    </div>
+  
+  
+    <div class="first">
+      <button style="font-weight: bold; background-color:#293241; color: white;" >Production</button>
+          <p><input type="text" name="" value="IPUOYA_MONDAY_7312" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+          <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+      
+          <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num20_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7312_supervisor" required><br>
+          <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num20_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7312_hr" required><br>
+          <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num20_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7312_hse" required><br>
+          <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result20" name="7312_grandtotal" readonly>
+        </div>
+
+        <div class="first">
+          <button style="font-weight: bold; background-color:#293241; color: white;" >Production</button>
+              <p><input type="text" name="" value="AWOYEMI_THOMAS_7314" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+              <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+          
+              <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num21_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7314_supervisor" required><br>
+              <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num21_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7314_hr" required><br>
+              <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num21_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7314_hse" required><br>
+              <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result21" name="7314_grandtotal" readonly>
+            </div>
+  
+        <div class="first">
+          <button style="font-weight: bold; background-color:#293241; color: white;" >Production</button>
+              <p><input type="text" name="" value="ATOYEBI_LEKAN_7368" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+              <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+          
+              <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num22_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7368_supervisor" required><br>
+              <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num22_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7368_hr" required><br>
+              <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num22_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7368_hse" required><br>
+              <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result22" name="7368_grandtotal" readonly>
+            </div>
+            
+<!-------->
+            <div class="first">
+              <button style="font-weight: bold; background-color:#293241; color: white;" >Quality_Control</button>
+                  <p><input type="text" name="" value="NWAGWO_HENRY_6242" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                  <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+              
+                  <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num23_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6242_supervisor" required><br>
+                  <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num23_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6242_hr" required><br>
+                  <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num23_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6242_hse" required><br>
+                  <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result23"  name="6242_grandtotal" readonly>
+                </div>
+
+                <div class="first">
+                  <button style="font-weight: bold; background-color:#293241; color: white;" >Quality_Control</button>
+                      <p><input type="text" name="" value="IZUAGHA_CHIEMENA_VICTOR_6648" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                      <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                  
+                      <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num24_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6648_supervisor" required><br>
+                      <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num24_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6648_hr" required><br>
+                      <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num24_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6648_hse" required><br>
+                      <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result24" name="6648_grandtotal" readonly>
+                    </div>
+
+                <div class="first">
+                  <button style="font-weight: bold; background-color:#293241; color: white;" >Quality_Control</button>
+                      <p><input type="text" name="" value="NWEKE_COSMAS_7216" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                      <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                  
+                      <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num25_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7216_supervisor" required><br>
+                      <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num25_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7216_hr" required><br>
+                      <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num25_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7216_hse" required><br>
+                      <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result25" name="7216_grandtotal" readonly>
+                    </div>
+
+                    <div class="first">
+                      <button style="font-weight: bold; background-color:#293241; color: white;" >Quality_Control</button>
+                          <p><input type="text" name="" value="ANIGWE_UCHE_7217" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                          <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                      
+                          <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num26_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7217_supervisor" required><br>
+                          <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num26_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7217_hr" required><br>
+                          <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num26_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7217_hse" required><br>
+                          <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result26" name="7217_grandtotal" readonly>
+                        </div>
+                
+<!-------->
+<div class="first">
+  <button style="font-weight: bold; background-color:#293241; color: white;" >Quality_Control</button>
+      <p><input type="text" name="" value="CHUKWUDUM_ORAKWUE_7284" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+      <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+  
+      <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num27_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7284_supervisor" required><br>
+      <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num27_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7284_hr" required><br>
+      <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num27_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7284_hse" required><br>
+      <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result27" name="7284_grandtotal" readonly>
+    </div>
+
+    <div class="first">
+      <button style="font-weight: bold; background-color:#293241; color: white;" >Quality_Control</button>
+          <p><input type="text" name="" value="OLOWOSAYO_BUKOLA_7311" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+          <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+      
+          <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num28_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7311_supervisor" required><br>
+          <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num28_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7311_hr" required><br>
+          <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num28_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7311_hse" required><br>
+          <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result28" name="7311_grandtotal" readonly>
+        </div>
+
+        <div class="first">
+          <button style="font-weight: bold; background-color:#293241; color: white;" >Quality_Assurance</button>
+              <p><input type="text" name="" value="OGUNDIRAN_VICTOR_08356" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+              <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+          
+              <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num29_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="8356_supervisor" required><br>
+              <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num29_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="8356_hr" required><br>
+              <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num29_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="8356_hse" required><br>
+              <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result29" name="8356_grandtotal" readonly>
+            </div>                
+                
+            <div class="first">
+              <button style="font-weight: bold; background-color:#293241; color: white;" >Maintenance</button>
+                  <p><input type="text" name="" value="ABODUNRIN_LAWREN_6939" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                  <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+              
+                  <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num30_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6939_supervisor" required><br>
+                  <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num30_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6939_hr" required><br>
+                  <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num30_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6939_hse" required><br>
+                  <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result30" name="6939_grandtotal" readonly>
+                </div>
+
+                <div class="first">
+                  <button style="font-weight: bold; background-color:#293241; color: white;" >Maintenance</button>
+                      <p><input type="text" name="" value="OGUNNIYI_FEMI_8119" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                      <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                  
+                      <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num31_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="8119_supervisor" required><br>
+                      <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num31_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="8119_hr" required><br>
+                      <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num31_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="8119_hse" required><br>
+                      <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result31" name="8119_grandtotal" readonly>
+                    </div>                
+
+
+                    <div class="first">
+                      <button style="font-weight: bold; background-color:#293241; color: white;" >Maintenance</button>
+                          <p><input type="text" name="" value="OYEWOLE_ABDULWAHEED_6940" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                          <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                      
+                          <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num32_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6940_supervisor" required><br>
+                          <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num32_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6940_hr" required><br>
+                          <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num32_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6940_hse" required><br>
+                          <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result32" name="6940_grandtotal" readonly>
+                        </div>
+                        
+
+                        <div class="first">
+                          <button style="font-weight: bold; background-color:#293241; color: white;" >Maintenance</button>
+                              <p><input type="text" name="" value="AYOTUNDE_SAMUEL_6941" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                              <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                          
+                              <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num33_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6941_supervisor" required><br>
+                              <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num33_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6941_hr" required><br>
+                              <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num33_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6941_hse" required><br>
+                              <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result33" name="6941_grandtotal" readonly>
+                            </div>
+
+
+
+                                        <div class="first">
+                                          <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                                              <p><input type="text" name="" value="AJIBOLA_PAPA_5830" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                                              <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                                          
+                                              <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num34_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="5830_supervisor" required><br>
+                                              <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num34_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="5830_hr" required><br>
+                                              <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num34_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="5830_hse" required><br>
+                                              <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result34" name="5830_grandtotal" readonly>
+                                            </div>  
+                                            
+                                            <div class="first">
+                                              <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                                                  <p><input type="text" name="" value="ADENIYI_LAWRENCE_6241" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                                                  <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                                              
+                                                  <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num35_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6241_supervisor" required><br>
+                                                  <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num35_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6241_hr" required><br>
+                                                  <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num35_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6241_hse" required><br>
+                                                  <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result35" name="6241_grandtotal" readonly>
+                                                </div>
+                                                
+                                                <div class="first">
+                                                  <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                                                      <p><input type="text" name="" value="BELLO_SIKIRAT_6509" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                                                      <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                                                  
+                                                      <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num36_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6509_supervisor" required><br>
+                                                      <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num36_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6509_hr" required><br>
+                                                      <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num36_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6509_hse" required><br>
+                                                      <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result36" name="6509_grandtotal"  readonly>
+                                                    </div>
+                                                    
+                                                    <div class="first">
+                                                      <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                                                          <p><input type="text" name="" value="EZEKOKA_CHIDINMA_8363" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                                                          <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                                                      
+                                                          <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num37_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="8363_supervisor" required><br>
+                                                          <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num37_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="8363_hr" required><br>
+                                                          <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num37_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="8363_hse" required><br>
+                                                          <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result37" name="8363_grandtotal" readonly>
+                                                        </div>
+                                                        
+                                                        <div class="first">
+                                                          <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                                                              <p><input type="text" name="" value="ADESUNMIBOYE_RUKAYAT_8592" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                                                              <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                                                          
+                                                              <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num38_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="8592_supervisor" required><br>
+                                                              <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num38_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="8592_hr" required><br>
+                                                              <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num38_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="8592_hse" required><br>
+                                                              <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result38" name="8592_grandtotal" readonly>
+                                                            </div>
+                                                            
+
+                                                      
+                                                                <div class="first">
+                                                                  <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                                                                      <p><input type="text" name="" value="AMEH_CHRISTOPHER_8265" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                                                                      <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                                                                  
+                                                                      <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num39_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="8265_supervisor" required><br>
+                                                                      <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num39_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="8265_hr" required><br>
+                                                                      <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num39_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="8265_hse" required><br>
+                                                                      <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result39" name="8265_grandtotal" readonly>
+                                                                    </div>
+ 
+                                                                    <div class="first">
+                                                                      <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                                                                          <p><input type="text" name="" value="JOHN_REBECCA_6903" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                                                                          <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                                                                      
+                                                                          <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num40_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6903_supervisor" required><br>
+                                                                          <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num40_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="6903_hr" required><br>
+                                                                          <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num40_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="6903_hse" required><br>
+                                                                          <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result40" name="6903_grandtotal" readonly>
+                                                                        </div>
+                                                                        
+                                                                        <div class="first">
+                                                                          <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                                                                              <p><input type="text" name="" value="SUNDAY_MKPUMA_7285" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                                                                              <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                                                                          
+                                                                              <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num41_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7285_supervisor" required><br>
+                                                                              <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num41_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7285_hr" required><br>
+                                                                              <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num41_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7285_hse" required><br>
+                                                                              <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result41" name="7285_grandtotal" readonly>
+                                                                            </div> 
+                                                                            
+                                                                            <div class="first">
+                                                                              <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                                                                                  <p><input type="text" name="" value="CAROLINE_OGUNKA_7380" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                                                                                  <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                                                                              
+                                                                                  <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num42_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7380_supervisor" required><br>
+                                                                                  <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num42_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7380_hr" required><br>
+                                                                                  <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num42_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7380_hse" required><br>
+                                                                                  <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result42" name="7380_grandtotal" readonly>
+                                                                                </div> 
+                                                                                
+                                                                                <div class="first">
+                                                                                  <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                                                                                      <p><input type="text" name="" value="UMEJE_CHINASA_7949" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                                                                                      <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                                                                                      <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num43_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7949_supervisor" required><br>
+                                                                                      <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num43_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7949_hr" required><br>
+                                                                                      <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num43_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7949_hse" required><br>
+                                                                                      <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result43" name="7949_grandtotal" readonly>
+                                                                                    </div> 
+                                                                                    
+                                                                                    <div class="first">
+                                                                                      <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                                                                                          <p><input type="text" name="" value="JOSEPH_RAHILA_7950" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                                                                                          <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                                                                                      
+                                                                                          <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num44_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7950_supervisor" required><br>
+                                                                                          <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num44_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="7950_hr " required><br>
+                                                                                          <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num44_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="7950_hse" required><br>
+                                                                                          <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result44" name="7950_grandtotal" readonly>
+                                                                                        </div> 
+                                                                                        
+                                                                                        <div class="first">
+                                                                                          <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                                                                                              <p><input type="text" name="" value="ADEROHUNMU_SHERIFFDEEN_8436" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                                                                                              <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                                                                                          
+                                                                                              <input type="text" value="SV" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"   id="num45_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="8436_supervisor" required><br>
+                                                                                              <input type="text" value="HSE" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num45_2" oninput="calculate()" style="width:30%; padding-left:1px;" name="8436_hr" required><br>
+                                                                                              <input type="text" value="HR" style="font-weight: bold; text-align: center; width: 30%; background-color: #293241; color: white;" disabled> <input type="number"  id="num45_3" oninput="calculate()" style="width:30%; padding-left:1px;" name="8436_hse" required><br>
+                                                                                              <input type="text" value="Grand Total" style="font-weight: bold;  width: 30%; background-color: goldenrod; color:red;" disabled>  <input type="number"  style="width:30%; padding-left:1px; "  id="result45" name="8436_grandtotal" readonly>
+                                                                                            </div>
+
+
+
+                                                                                            <div class="clear"></div>
+                                                                                            
+ 
+
+                                                                                            <div class="clear"></div>
+                                                                                            
+</nav>
+</section>
+<div class="super"> Supervisors</div>
+<hr>
+<div class="first">
+  <button style="font-weight: bold; background-color:#293241; color: white;" >Logistics</button>
+      <p><input type="text" name="" value="SULE_AHMED_6043" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+      <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+  
+        <input type="text" value="PM SCORE" style="font-weight: bold; text-align: center; width: 30%; background-color: goldenrod; color:red;" disabled> <input type="number"   id="num44_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6043_pm_score" required><br>
+
+    </div>
+
+    <div class="first">
+      <button style="font-weight: bold; background-color:#293241; color: white;" >Production</button>
+          <p><input type="text" name="" value="ADEWOYE_GEORGE_6042" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+          <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+      
+          <input type="text" value="PM SCORE" style="font-weight: bold; text-align: center; width: 30%; background-color: goldenrod; color:red;" disabled> <input type="number"   id="num45_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6042_pm_score" required><br>
+
+        </div>
+
+        <div class="first">
+          <button style="font-weight: bold; background-color:#293241; color: white;" >Quality_Control</button>
+              <p><input type="text" name="" value="UMEIZU_INNOCENT_6846" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+              <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+          
+              <input type="text" value="PM SCORE" style="font-weight: bold; text-align: center; width: 30%; background-color: goldenrod; color:red;" disabled> <input type="number"   id="num46_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6846_pm_score" required><br>
+ 
+            </div>
+
+            <div class="first">
+              <button style="font-weight: bold; background-color:#293241; color: white;" >Quality_Assurance</button>
+                  <p><input type="text" name="" value="SHOGUNLE_SEGUN_JAMES_7733" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                  <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+              
+                  <input type="text" value="PM SCORE" style="font-weight: bold; text-align: center; width: 30%; background-color: goldenrod; color:red;" disabled> <input type="number"   id="num47_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7733_pm_score" required><br>
+ 
+                </div>
+
+                <div class="first">
+                  <button style="font-weight: bold; background-color:#293241; color: white;" >Maintenance</button>
+                      <p><input type="text" name="" value="FAGBEMISOYE_MAYOMI_3434" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                      <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                  
+                      <input type="text" value="PM SCORE" style="font-weight: bold; text-align: center; width: 30%; background-color: goldenrod; color:red;" disabled> <input type="number"   id="num48_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="3434_pm_score" required><br>
+
+                    </div>
+    
+
+                <div class="first">
+                  <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                      <p><input type="text" name="" value="FAKOYA_ADETOLA_6983" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                      <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                  
+                      <input type="text" value="PM SCORE" style="font-weight: bold; text-align: center; width: 30%; background-color: goldenrod; color:red;" disabled> <input type="number"   id="num49_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="6983_pm_score" required><br>
+
+                    </div>
+
+                    <div class="first">
+                      <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                          <p><input type="text" name="" value="JULIUS_ATAKE_7101" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                          <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                      
+                          <input type="text" value="PM SCORE" style="font-weight: bold; text-align: center; width: 30%; background-color: goldenrod; color:red;" disabled> <input type="number"   id="num50_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="7101_pm_score" required><br>
+
+                        </div>
+
+                        <div class="first">
+                          <button style="font-weight: bold; background-color:#293241; color: white;" >Shared_Service</button>
+                              <p><input type="text" name="" value="YAKUB_FAIDAT_100528" id="" style="font-weight: bold; background-color: #293241; color: white;" disabled></p>
+                              <input type="text" value="KPI" style="font-weight: bold; text-align: center; width: 30%; margin-bottom: 10px;" disabled><br>
+                          
+                              <input type="text" value="PM SCORE" style="font-weight: bold; text-align: center; width: 30%; background-color: goldenrod; color:red;" disabled> <input type="number"   id="num51_1" oninput="calculate()" style="width:30%; padding-left:1px;" name="100528_pm_score" required><br>
+ 
+                            </div>
+</div>
+
+</form>
+
+
+  </main>
+
+  <div class="clear"></div>
+  <div >
+    <button  class="button1"  onclick='SubForm()' >Submit</button>
+  
+  </div>
+  <div class="clear"></div>
+  <footer>  
+       <hr>
+<div class="copyright1">
+ <small>copyright&copy;2023Mikano</small> 
+</div>
+
+</footer>
+  
+</body>
+<!---Script for date-->
+<script>
+  // Get the current date and format it as YYYY-MM-DD
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+  const currentDate = `${year}-${month}-${day}`;
+
+  // Set the min attribute of the date input to prevent backdates
+  const dateInput = document.getElementById('dateInput');
+  dateInput.min = currentDate;
+</script>
+
+</html>
