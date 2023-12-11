@@ -11,7 +11,7 @@ The Human Resource Process Software (HRPS) is designed to maintain records of st
 
 ### Technology Stack:
 - **Programming Language:** JavaScript
-- **Database:** Google Drive, Spreadsheet API
+- **Database:** Google Drive, Spreadsheet API, Firebase Messaging Service
 - **Development Tools:** Visual Studio Code (VS Code)
 
 The HRPS is a robust software solution that streamlines HR processes, providing a user-friendly interface while supporting efficient management of staff records and KPI monitoring. It's adaptable for both desktop and mobile platforms, enhancing accessibility and usability for HR operations.
